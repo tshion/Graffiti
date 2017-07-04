@@ -1,0 +1,10 @@
+version: '2.1'
+
+services:
+  itlog:
+    build: .
+    ports:
+      - 8000:8000
+    volumes:
+      - ./app:/workspace/app
+    command: npm start
