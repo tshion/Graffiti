@@ -1,5 +1,5 @@
 {
-  "name": "gulp on docker",
+  "name": "gulpondocker",
   "version": "1.0.0",
   "description": "Gulp sample working on a docker",
   "main": "server.js",
