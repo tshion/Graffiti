@@ -50,6 +50,12 @@
     <Compile Include="Custom1.Designer.cs">
       <DependentUpon>Custom1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Custom2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Custom2.Designer.cs">
+      <DependentUpon>Custom2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
