@@ -21,6 +21,18 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_1F31D68375E308923313A0FA186CEE6A"
+        "OwnerKey" = "8:_26E62CD6B919483A806122553631D959"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_26E62CD6B919483A806122553631D959"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_8CE6B8074436444EB59CAB13260484F6"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -29,6 +41,12 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_1F31D68375E308923313A0FA186CEE6A"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_26E62CD6B919483A806122553631D959"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -77,6 +95,62 @@
     {
         "CustomAction"
         {
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_2FC79407CDFD49EDB58344740955A597"
+            {
+            "Name" = "8:プライマリ出力 from CustomAction (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_26E62CD6B919483A806122553631D959"
+            "FileType" = "3:1"
+            "InstallAction" = "3:4"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_85B83EE9_0FAF_4DD4_876D_736C9A581350"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_97BC644E32094356B3A20FAC4587BA2F"
+            {
+            "Name" = "8:プライマリ出力 from CustomAction (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_26E62CD6B919483A806122553631D959"
+            "FileType" = "3:1"
+            "InstallAction" = "3:2"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_54CD39B9_977A_471C_95BD_C66E3157D099"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_C70558ADD0884BBA8E3A1570A7AB606B"
+            {
+            "Name" = "8:プライマリ出力 from CustomAction (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_26E62CD6B919483A806122553631D959"
+            "FileType" = "3:1"
+            "InstallAction" = "3:1"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_A68C5DA3_48D5_4057_8733_A371C1B184E3"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_FAE24A00B1364A67A6C2BD320C1FD332"
+            {
+            "Name" = "8:プライマリ出力 from CustomAction (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_26E62CD6B919483A806122553631D959"
+            "FileType" = "3:1"
+            "InstallAction" = "3:3"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_0AD0676A_9C6A_4D4B_B016_F830776B43C9"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
         }
         "DefaultFeature"
         {
@@ -188,7 +262,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Installer"
         "ProductCode" = "8:{C6F1E34E-A96B-4100-8F38-1D7CAAF2230F}"
-        "PackageCode" = "8:{2B07FB58-5E90-45D3-84E4-17D8C725022B}"
+        "PackageCode" = "8:{5A35249A-8873-4BA5-8ABC-8CC187BF97BD}"
         "UpgradeCode" = "8:{AE0BE03C-73AB-4A8F-A0CA-A7FB3CF7BEF3}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -707,6 +781,34 @@
         }
         "ProjectOutput"
         {
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_26E62CD6B919483A806122553631D959"
+            {
+            "SourcePath" = "8:..\\CustomAction\\obj\\Debug\\CustomAction.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_CDBCAA8E5EE34006A6CFE94AB4348B8F"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:Built"
+            "OutputProjectGuid" = "8:{62D3975D-DF19-4DC6-BC13-AD6ED3861C29}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_8CE6B8074436444EB59CAB13260484F6"
             {
             "SourcePath" = "8:..\\HelloWorld\\obj\\Debug\\HelloWorld.exe"
