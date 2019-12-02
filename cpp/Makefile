@@ -5,8 +5,9 @@ SRC = ./src
 
 
 
-main: $(SRC)/hello.o $(SRC)/main.o
+main: $(SRC)/GraphModel.o $(SRC)/main.o
 	mkdir -p $(OUT)
-	$(COMPILER) -std=$(CPP_VERSION) -o $(OUT)/$@ $(SRC)/hello.o $(SRC)/main.o
+	$(COMPILER) -std=$(CPP_VERSION) -o $(OUT)/$@ $(SRC)/GraphModel.o $(SRC)/main.o
 
 hello.o: $(SRC)/hello.hpp
+GraphModel.o: $(SRC)/GraphModel.hpp
