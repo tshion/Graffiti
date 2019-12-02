@@ -98,4 +98,3 @@ dkms.conf
 ### Project ###
 ###############
 bin/
-*.pgm

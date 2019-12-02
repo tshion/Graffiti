@@ -15,6 +15,19 @@
                 "${workspaceRoot}/cpp:/home/worker",
                 "gcc"
             ],
+        },
+        {
+            "label": "edit swift in docker",
+            "type": "shell",
+            "command": "docker",
+            "args": [
+                "run",
+                "--rm",
+                "-it",
+                "-v",
+                "${workspaceRoot}/swift:/home/worker",
+                "tshion/swift-repl:2019-11-30-a"
+            ],
         }
     ]
 }
