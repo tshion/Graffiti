@@ -26,7 +26,7 @@
                 "-it",
                 "-v",
                 "${workspaceRoot}/swift:/home/worker",
-                "tshion/swift-repl:2019-11-30-a"
+                "tshion/swift-repl:2019-12-02-a"
             ],
         }
     ]
