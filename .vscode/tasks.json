@@ -17,6 +17,19 @@
             ],
         },
         {
+            "label": "edit c# in docker",
+            "type": "shell",
+            "command": "docker",
+            "args": [
+                "run",
+                "--rm",
+                "-it",
+                "-v",
+                "${workspaceRoot}/csharp:/home/worker",
+                "mcr.microsoft.com/dotnet/core/sdk:3.1"
+            ],
+        },
+        {
             "label": "edit swift in docker",
             "type": "shell",
             "command": "docker",

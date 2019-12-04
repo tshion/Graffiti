@@ -4,6 +4,7 @@
 言語 | 開発環境用Docker | コード整形 | デバッグ
 --- | --- | :---: | :---:
 C++ | [gcc][dh_gcc] | × | ×
+C# | [.NET Core SDK][dh_dotnet] | ◯ | ◯
 Swift | [tshion/swift-repl][dh_swift_repl] | × | ×
 
 
@@ -24,6 +25,7 @@ Swift | [tshion/swift-repl][dh_swift_repl] | × | ×
 
 ## 関連リンク
 * Docker イメージ
+    * [.NET Core SDK][dh_dotnet]
     * [gcc][dh_gcc]
     * [tshion/swift-repl][dh_swift_repl]
 * Visual Studio Code 拡張機能
@@ -33,6 +35,7 @@ Swift | [tshion/swift-repl][dh_swift_repl] | × | ×
 
 
 
+[dh_dotnet]: https://hub.docker.com/_/microsoft-dotnet-core-sdk
 [dh_gcc]: https://hub.docker.com/_/gcc
 [dh_swift_repl]: https://hub.docker.com/r/tshion/swift-repl
 
