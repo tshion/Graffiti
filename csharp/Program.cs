@@ -14,7 +14,7 @@ namespace MandelbrotSet
 
             Console.WriteLine("Start Calculation");
             var swCalculation = Stopwatch.StartNew();
-            var map = model.MakeMandelbrotSet(
+            var map = model.MakeMandelbrotSetParallel(
                 new Complex(0.50, 1.00),
                 new Complex(-1.50, -1.00),
                 size
