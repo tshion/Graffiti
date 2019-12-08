@@ -30,6 +30,19 @@
             ],
         },
         {
+            "label": "edit java in docker",
+            "type": "shell",
+            "command": "docker",
+            "args": [
+                "run",
+                "--rm",
+                "-it",
+                "-v",
+                "${workspaceRoot}/java:/home/worker",
+                "openjdk:13.0.1-jdk"
+            ],
+        },
+        {
             "label": "edit swift in docker",
             "type": "shell",
             "command": "docker",
