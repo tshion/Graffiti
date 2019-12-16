@@ -5,6 +5,7 @@
 --- | --- | :---: | :---:
 C++ | [gcc][dh_gcc] | × | ×
 C# | [.NET Core SDK][dh_dotnet] | ◯ | ◯
+Java | [openjdk][dh_openjdk] | ◯ | ◯
 Swift | [tshion/swift-repl][dh_swift_repl] | × | ×
 
 
@@ -27,6 +28,7 @@ Swift | [tshion/swift-repl][dh_swift_repl] | × | ×
 * Docker イメージ
     * [.NET Core SDK][dh_dotnet]
     * [gcc][dh_gcc]
+    * [openjdk][dh_openjdk]
     * [tshion/swift-repl][dh_swift_repl]
 * Visual Studio Code 拡張機能
     * [Docker][vscode_docker]
@@ -37,6 +39,7 @@ Swift | [tshion/swift-repl][dh_swift_repl] | × | ×
 
 [dh_dotnet]: https://hub.docker.com/_/microsoft-dotnet-core-sdk
 [dh_gcc]: https://hub.docker.com/_/gcc
+[dh_openjdk]: https://hub.docker.com/_/openjdk
 [dh_swift_repl]: https://hub.docker.com/r/tshion/swift-repl
 
 [vscode_docker]: https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker
