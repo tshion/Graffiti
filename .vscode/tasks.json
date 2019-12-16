@@ -30,6 +30,19 @@
             ],
         },
         {
+            "label": "edit go in docker",
+            "type": "shell",
+            "command": "docker",
+            "args": [
+                "run",
+                "--rm",
+                "-it",
+                "-v",
+                "${workspaceRoot}/go:/home/worker",
+                "golang"
+            ],
+        },
+        {
             "label": "edit java in docker",
             "type": "shell",
             "command": "docker",

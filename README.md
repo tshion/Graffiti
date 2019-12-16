@@ -5,6 +5,7 @@
 --- | --- | :---: | :---:
 C++ | [gcc][dh_gcc] | × | ×
 C# | [.NET Core SDK][dh_dotnet] | ◯ | ◯
+Go | [golang][dh_golang] | ◯ | ◯
 Java | [openjdk][dh_openjdk] | ◯ | ◯
 Swift | [tshion/swift-repl][dh_swift_repl] | × | ×
 
@@ -28,6 +29,7 @@ Swift | [tshion/swift-repl][dh_swift_repl] | × | ×
 * Docker イメージ
     * [.NET Core SDK][dh_dotnet]
     * [gcc][dh_gcc]
+    * [golang][dh_golang]
     * [openjdk][dh_openjdk]
     * [tshion/swift-repl][dh_swift_repl]
 * Visual Studio Code 拡張機能
@@ -39,6 +41,7 @@ Swift | [tshion/swift-repl][dh_swift_repl] | × | ×
 
 [dh_dotnet]: https://hub.docker.com/_/microsoft-dotnet-core-sdk
 [dh_gcc]: https://hub.docker.com/_/gcc
+[dh_golang]: https://hub.docker.com/_/golang
 [dh_openjdk]: https://hub.docker.com/_/openjdk
 [dh_swift_repl]: https://hub.docker.com/r/tshion/swift-repl
 
