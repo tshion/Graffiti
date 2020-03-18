@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.IO;
 using System.Numerics;
+using MandelbrotSet.Models;
 
 namespace MandelbrotSet
 {
@@ -10,11 +11,12 @@ namespace MandelbrotSet
         static void Main(string[] args)
         {
             var size = 1024;
-            var model = new GraphModel();
+            //var model = new GraphModel();
+            var model = new GraphParallelModel();
 
             Console.WriteLine("Start Calculation");
             var swCalculation = Stopwatch.StartNew();
-            var map = model.MakeMandelbrotSetParallel(
+            var map = model.MakeMandelbrotSet(
                 new Complex(0.50, 1.00),
                 new Complex(-1.50, -1.00),
                 size
