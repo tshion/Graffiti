@@ -1,12 +1,11 @@
 using System.Numerics;
-using System.Threading.Tasks;
 
-namespace MandelbrotSet.Models
+namespace Executor.Models
 {
     /// <summary>
-    /// グラフ生成モデル(並列処理版)
+    /// グラフ生成モデル
     /// </summary>
-    class GraphParallelModel : IGraphModel
+    public class GraphModel : IGraphModel
     {
         /// <summary>
         /// マンデルブロ集合を生成する
@@ -40,7 +39,7 @@ namespace MandelbrotSet.Models
             }
 
             var result = new int[size, size];
-            Parallel.For(0, size, row =>
+            for (int row = 0; row < size; row++)
             {
                 for (int col = 0; col < size; col++)
                 {
@@ -55,8 +54,8 @@ namespace MandelbrotSet.Models
                             break;
                         }
                     }
-                };
-            });
+                }
+            }
             return result;
         }
     }

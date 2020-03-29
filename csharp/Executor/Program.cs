@@ -2,9 +2,9 @@
 using System.Diagnostics;
 using System.IO;
 using System.Numerics;
-using MandelbrotSet.Models;
+using Executor.Models;
 
-namespace MandelbrotSet
+namespace Executor
 {
     class Program
     {

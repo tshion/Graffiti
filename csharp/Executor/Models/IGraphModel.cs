@@ -1,6 +1,6 @@
 using System.Numerics;
 
-namespace MandelbrotSet.Models
+namespace Executor.Models
 {
     /// <summary>
     /// グラフ生成モデルの定義
