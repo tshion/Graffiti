@@ -1,8 +1,7 @@
-﻿using System;
-using System.Diagnostics;
-using System.IO;
-using System.Numerics;
-using Executor.Models;
+﻿using Core.Entities;
+using Core.UseCases;
+using DataSource;
+using System.Linq;
 
 namespace Executor
 {
@@ -10,38 +9,28 @@ namespace Executor
     {
         static void Main(string[] args)
         {
-            var size = 1024;
-            //var model = new GraphModel();
-            var model = new GraphParallelModel();
-
-            Console.WriteLine("Start Calculation");
-            var swCalculation = Stopwatch.StartNew();
-            var map = model.MakeMandelbrotSet(
-                new Complex(0.50, 1.00),
-                new Complex(-1.50, -1.00),
-                size
+            var useCase = new DrawingUseCase(
+                //new GraphModel(),
+                new GraphParallelModel(),
+                new PgmFileModel()
             );
-            swCalculation.Stop();
-            Console.WriteLine($"Finish Calculation: {swCalculation.ElapsedMilliseconds}[ms]");
 
-            Console.WriteLine("Start File Output");
-            var swOutput = Stopwatch.StartNew();
-            using (var writer = new StreamWriter("image.pgm"))
+            var minIm = -1.00;
+            var minRe = -1.50;
+            var pixelIm = 1024;
+            var pixelRe = 1024;
+            var scaleIm = (1.00 - minIm) / pixelIm;
+            var scaleRe = (0.50 - minRe) / pixelRe;
+
+            var result = useCase.DrawImage(new MandelbrotEntity
             {
-                writer.WriteLine("P2");
-                writer.WriteLine($"{size} {size}");
-                writer.WriteLine("255");
-                for (int row = 0; row < size; row++)
-                {
-                    for (int col = 0; col < size; col++)
-                    {
-                        writer.Write($"{map[row, col]}\t");
-                    }
-                    writer.WriteLine();
-                }
-            }
-            swOutput.Stop();
-            Console.WriteLine($"Finish File Output: {swOutput.ElapsedMilliseconds}[ms]");
+                DivergenceBorder = 100,
+                GiveUpBorder = 500,
+                RangeImage = Enumerable.Range(0, pixelIm).Select(i => scaleIm * i + minIm).ToArray(),
+                RangeReal = Enumerable.Range(0, pixelRe).Select(i => scaleRe * i + minRe).ToArray(),
+            });
+
+            useCase.SaveImage(result);
         }
     }
 }
