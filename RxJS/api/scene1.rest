@@ -1,0 +1,5 @@
+### 1. endpoint1.json を叩く
+GET http://localhost:8887/endpoint1.json
+
+### 2. 手順１からid を取得し、endpoint2/:id.json を叩く
+GET http://localhost:8887/endpoint2/1.json

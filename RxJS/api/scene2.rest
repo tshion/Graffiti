@@ -1,0 +1,18 @@
+### 1. ```/token``` をPOST で叩き、アクセストークンを保存する
+POST http://localhost:8887/token
+
+### 2. 手順１で得たトークンを使って、```/secret1``` を叩く
+GET http://localhost:8887/secret1
+Authorization: abcde
+
+### 3. 手順１で得たトークンを使って、```/secret2``` を叩く
+GET http://localhost:8887/secret2
+Authorization: abcde
+
+### 4. 認証エラーになるので、```/token``` にPUT してトークンをリフレッシュする
+PUT http://localhost:8887/token
+Authorization: 12345
+
+### 5. 手順４で得たトークンを使って、```/secret2``` を叩く
+GET http://localhost:8887/secret2
+Authorization: 12345
