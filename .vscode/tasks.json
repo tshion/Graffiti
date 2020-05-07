@@ -4,7 +4,7 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "edit c++ in docker",
+            "label": "Mandelbrot: edit c++ in docker",
             "type": "shell",
             "command": "docker",
             "args": [
@@ -12,12 +12,12 @@
                 "--rm",
                 "-it",
                 "-v",
-                "${workspaceRoot}/cpp:/home/worker",
+                "${workspaceFolder}/MandelbrotSet/cpp:/home/worker",
                 "gcc"
             ],
         },
         {
-            "label": "edit c# in docker",
+            "label": "Mandelbrot: edit c# in docker",
             "type": "shell",
             "command": "docker",
             "args": [
@@ -25,12 +25,12 @@
                 "--rm",
                 "-it",
                 "-v",
-                "${workspaceRoot}/csharp:/home/worker",
+                "${workspaceFolder}/MandelbrotSet/csharp:/home/worker",
                 "mcr.microsoft.com/dotnet/core/sdk:3.1"
             ],
         },
         {
-            "label": "edit go in docker",
+            "label": "Mandelbrot: edit go in docker",
             "type": "shell",
             "command": "docker",
             "args": [
@@ -38,12 +38,12 @@
                 "--rm",
                 "-it",
                 "-v",
-                "${workspaceRoot}/go:/home/worker",
+                "${workspaceFolder}/MandelbrotSet/go:/home/worker",
                 "golang"
             ],
         },
         {
-            "label": "edit java in docker",
+            "label": "Mandelbrot: edit java in docker",
             "type": "shell",
             "command": "docker",
             "args": [
@@ -51,12 +51,12 @@
                 "--rm",
                 "-it",
                 "-v",
-                "${workspaceRoot}/java:/home/worker",
+                "${workspaceRoot}/MandelbrotSet/java:/home/worker",
                 "openjdk:13.0.1-jdk"
             ],
         },
         {
-            "label": "edit swift in docker",
+            "label": "Mandelbrot: edit swift in docker",
             "type": "shell",
             "command": "docker",
             "args": [
@@ -64,7 +64,7 @@
                 "--rm",
                 "-it",
                 "-v",
-                "${workspaceRoot}/swift:/home/worker",
+                "${workspaceFolder}/MandelbrotSet/swift:/home/worker",
                 "tshion/swift-repl:2019-12-02-a"
             ],
         }

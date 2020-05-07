@@ -89,10 +89,3 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
-
-
-
-###############
-### Project ###
-###############
-*.pgm
