@@ -21,6 +21,15 @@
       "sourceMaps": true,
       "url": "http://localhost:8100",
       "webRoot": "${workspaceFolder}/Scene1RxJS5/www"
+    },
+    {
+      "type": "chrome",
+      "preLaunchTask": "Scene2RxJS5: serve",
+      "request": "launch",
+      "name": "Scene2RxJS5: Debug",
+      "sourceMaps": true,
+      "url": "http://localhost:8100",
+      "webRoot": "${workspaceFolder}/Scene2RxJS5/www"
     }
   ]
 }

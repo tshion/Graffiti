@@ -5,6 +5,12 @@
       "integrations": {},
       "type": "ionic-angular",
       "root": "Scene1RxJS5"
+    },
+    "Scene2RxJS5": {
+      "name": "Scene2RxJS5",
+      "integrations": {},
+      "type": "ionic-angular",
+      "root": "Scene2RxJS5"
     }
   }
 }

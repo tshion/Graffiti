@@ -37,5 +37,31 @@
         ],
       },
     },
+    {
+      "label": "Scene2RxJS5: serve",
+      "type": "shell",
+      "command": "ionic",
+      "args": [
+        "serve",
+        "--host=0.0.0.0",
+        "--project=Scene2RxJS5"
+      ],
+      "isBackground": true,
+      "problemMatcher": {
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": ".",
+          "endsPattern": ".*Development server running!.*",
+        },
+        "pattern": [
+          {
+            "regexp": ".",
+            "file": 1,
+            "location": 2,
+            "message": 3
+          }
+        ],
+      },
+    },
   ]
 }
