@@ -4,6 +4,7 @@
     // List of extensions which should be recommended for users of this workspace.
     "recommendations": [
         "angular.ng-template",
+        "editorconfig.editorconfig",
         "humao.rest-client",
         "msjsdiag.debugger-for-chrome",
         "ms-vscode.vscode-typescript-tslint-plugin",

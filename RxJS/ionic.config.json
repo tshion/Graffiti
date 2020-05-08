@@ -1,0 +1,10 @@
+{
+  "projects": {
+    "Scene1RxJS5": {
+      "name": "Scene1RxJS5",
+      "integrations": {},
+      "type": "ionic-angular",
+      "root": "Scene1RxJS5"
+    }
+  }
+}
