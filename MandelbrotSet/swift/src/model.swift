@@ -22,7 +22,7 @@ public class Model {
                 table[i - 1].1 + scale.1
             ))
         }
-        var history = [(Double, Double)](repeating: (0, 0), count: size)
+        var history = [(Double, Double)](repeating: (0, 0), count: maxCycle)
 
         var result = [[Int]](repeating: [Int](repeating: 0, count: size), count: size)
         for row in 0 ..< size {
