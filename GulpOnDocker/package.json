@@ -1,0 +1,19 @@
+{
+  "name": "gulpondocker",
+  "version": "1.0.0",
+  "description": "Gulp sample working on a docker",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm-run-all -p server watch",
+
+    "server": "node node_modules/http-server/bin/http-server ./app/wwwroot -p 8000 -o -c-1",
+    "watch": "gulp watch"
+  },
+  "author": "Tenta Shion",
+  "license": "MIT",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "http-server": "^0.10.0",
+    "npm-run-all": "^4.0.2"
+  }
+}
