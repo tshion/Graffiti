@@ -1,0 +1,2 @@
+# LibraryStandard
+.NET Standard のライブラリプロジェクト
