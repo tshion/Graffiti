@@ -27,8 +27,26 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_A80F81254A9030AC7B0B5A280BB0D34C"
+        "OwnerKey" = "8:_CE36FA5CCE86462AA9D064AF5D4737CD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_CE36FA5CCE86462AA9D064AF5D4737CD"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_A80F81254A9030AC7B0B5A280BB0D34C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_CE36FA5CCE86462AA9D064AF5D4737CD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -77,6 +95,62 @@
     {
         "CustomAction"
         {
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_008D068A9CBB4BB796BE32401B069667"
+            {
+            "Name" = "8:プライマリ出力 from MSVSIPAction (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_CE36FA5CCE86462AA9D064AF5D4737CD"
+            "FileType" = "3:1"
+            "InstallAction" = "3:4"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_CC9B96BD_9552_4AEA_A191_170E6F8C7F44"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_B7E0353B46464888BCCE97A1CBA1667E"
+            {
+            "Name" = "8:プライマリ出力 from MSVSIPAction (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_CE36FA5CCE86462AA9D064AF5D4737CD"
+            "FileType" = "3:1"
+            "InstallAction" = "3:2"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_DB496737_A263_4C7E_836D_D14B27BAC6E0"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_C2A50099830A46EAA506938AFB331E91"
+            {
+            "Name" = "8:プライマリ出力 from MSVSIPAction (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_CE36FA5CCE86462AA9D064AF5D4737CD"
+            "FileType" = "3:1"
+            "InstallAction" = "3:3"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_065474DD_41D2_401D_BC71_B484D869919F"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
+            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_E0E04C674A644516BF231244BA0BDD69"
+            {
+            "Name" = "8:プライマリ出力 from MSVSIPAction (Active)"
+            "Condition" = "8:"
+            "Object" = "8:_CE36FA5CCE86462AA9D064AF5D4737CD"
+            "FileType" = "3:1"
+            "InstallAction" = "3:1"
+            "Arguments" = "8:"
+            "EntryPoint" = "8:"
+            "Sequence" = "3:1"
+            "Identifier" = "8:_2AED6B44_DA56_416F_9D42_C4DE29DD9E73"
+            "InstallerClass" = "11:TRUE"
+            "CustomActionData" = "8:"
+            }
         }
         "DefaultFeature"
         {
@@ -188,7 +262,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:MSVSIPInstaller"
         "ProductCode" = "8:{8E1CD010-B524-496D-9CFD-B57840E5454F}"
-        "PackageCode" = "8:{AB5ED60C-1527-410F-A806-9BE7DD695FE1}"
+        "PackageCode" = "8:{45370F96-1AFA-4A93-8336-F6442C9A78F0}"
         "UpgradeCode" = "8:{60989C86-B153-436F-9A03-DD49CE52BABA}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -730,6 +804,34 @@
             "OutputConfiguration" = "8:"
             "OutputGroupCanonicalName" = "8:Built"
             "OutputProjectGuid" = "8:{430A020C-3C2D-414B-A2CA-3A8305F9BC14}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_CE36FA5CCE86462AA9D064AF5D4737CD"
+            {
+            "SourcePath" = "8:..\\MSVSIPAction\\obj\\Debug\\MSVSIPAction.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_6E0809E10026464583E9FD25690B6440"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:"
+            "OutputGroupCanonicalName" = "8:Built"
+            "OutputProjectGuid" = "8:{2479B331-80ED-41D2-82F6-BD34C5CC8E4C}"
             "ShowKeyOutput" = "11:TRUE"
                 "ExcludeFilters"
                 {

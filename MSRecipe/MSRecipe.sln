@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleNET", "ConsoleNET\Co
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "MSVSIPInstaller", "MSVSIPInstaller\MSVSIPInstaller.vdproj", "{135F40F0-149B-4B18-8A0A-71D38DF8018B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MSVSIPAction", "MSVSIPAction\MSVSIPAction.csproj", "{2479B331-80ED-41D2-82F6-BD34C5CC8E4C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -42,6 +44,10 @@ Global
 		{430A020C-3C2D-414B-A2CA-3A8305F9BC14}.Release|Any CPU.Build.0 = Release|Any CPU
 		{135F40F0-149B-4B18-8A0A-71D38DF8018B}.Debug|Any CPU.ActiveCfg = Debug
 		{135F40F0-149B-4B18-8A0A-71D38DF8018B}.Release|Any CPU.ActiveCfg = Release
+		{2479B331-80ED-41D2-82F6-BD34C5CC8E4C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2479B331-80ED-41D2-82F6-BD34C5CC8E4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2479B331-80ED-41D2-82F6-BD34C5CC8E4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2479B331-80ED-41D2-82F6-BD34C5CC8E4C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
