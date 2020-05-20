@@ -12,7 +12,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleCore", "ConsoleCore\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LibraryStandard", "LibraryStandard\LibraryStandard.csproj", "{1C27FACB-A492-4AEB-A7F2-25A1A847C281}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitLibraryStandard", "NUnitLibraryStandard\NUnitLibraryStandard.csproj", "{C7CA397A-BFEB-4E09-A964-C72E5248F256}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NUnitLibraryStandard", "NUnitLibraryStandard\NUnitLibraryStandard.csproj", "{C7CA397A-BFEB-4E09-A964-C72E5248F256}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleNET", "ConsoleNET\ConsoleNET.csproj", "{430A020C-3C2D-414B-A2CA-3A8305F9BC14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -32,6 +34,10 @@ Global
 		{C7CA397A-BFEB-4E09-A964-C72E5248F256}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C7CA397A-BFEB-4E09-A964-C72E5248F256}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C7CA397A-BFEB-4E09-A964-C72E5248F256}.Release|Any CPU.Build.0 = Release|Any CPU
+		{430A020C-3C2D-414B-A2CA-3A8305F9BC14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{430A020C-3C2D-414B-A2CA-3A8305F9BC14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{430A020C-3C2D-414B-A2CA-3A8305F9BC14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{430A020C-3C2D-414B-A2CA-3A8305F9BC14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
