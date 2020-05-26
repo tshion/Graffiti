@@ -78,7 +78,7 @@
                 "-it",
                 "-v",
                 "${workspaceFolder}/MandelbrotSet/swift:/home/worker",
-                "tshion/swift-repl:2020-05-02-a"
+                "tshion/swift-repl:2020-05-20-a"
             ],
         },
         {
@@ -103,7 +103,7 @@
                 "53703:53703",
                 "-v",
                 "${workspaceFolder}/RxJS:/home/worker",
-                "tshion/ionic-repl:6.8.0.0"
+                "tshion/ionic-repl:6.9.2.1"
             ],
         }
     ]
