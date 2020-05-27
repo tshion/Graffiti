@@ -17,68 +17,11 @@
             ],
         },
         {
-            "label": "Mandelbrot: edit c++ in docker",
+            "label": "Open Mandelbrot",
             "type": "shell",
-            "command": "docker",
+            "command": "code",
             "args": [
-                "run",
-                "--rm",
-                "-it",
-                "-v",
-                "${workspaceFolder}/MandelbrotSet/cpp:/home/worker",
-                "gcc"
-            ],
-        },
-        {
-            "label": "Mandelbrot: edit c# in docker",
-            "type": "shell",
-            "command": "docker",
-            "args": [
-                "run",
-                "--rm",
-                "-it",
-                "-v",
-                "${workspaceFolder}/MandelbrotSet/csharp:/home/worker",
-                "mcr.microsoft.com/dotnet/core/sdk:3.1"
-            ],
-        },
-        {
-            "label": "Mandelbrot: edit go in docker",
-            "type": "shell",
-            "command": "docker",
-            "args": [
-                "run",
-                "--rm",
-                "-it",
-                "-v",
-                "${workspaceFolder}/MandelbrotSet/go:/home/worker",
-                "golang"
-            ],
-        },
-        {
-            "label": "Mandelbrot: edit java in docker",
-            "type": "shell",
-            "command": "docker",
-            "args": [
-                "run",
-                "--rm",
-                "-it",
-                "-v",
-                "${workspaceRoot}/MandelbrotSet/java:/home/worker",
-                "openjdk:13.0.1-jdk"
-            ],
-        },
-        {
-            "label": "Mandelbrot: edit swift in docker",
-            "type": "shell",
-            "command": "docker",
-            "args": [
-                "run",
-                "--rm",
-                "-it",
-                "-v",
-                "${workspaceFolder}/MandelbrotSet/swift:/home/worker",
-                "tshion/swift-repl:2020-05-20-a"
+                "MandelbrotSet"
             ],
         },
         {
