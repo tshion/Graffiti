@@ -48,6 +48,19 @@
                 "${workspaceFolder}/RxJS:/home/worker",
                 "tshion/ionic-repl:6.9.2.1"
             ],
+        },
+        {
+            "label": "SwiftRecipe: Develop in docker",
+            "type": "shell",
+            "command": "docker",
+            "args": [
+                "run",
+                "--rm",
+                "-it",
+                "-v",
+                "${workspaceFolder}/SwiftRecipe:/home/worker",
+                "tshion/swift-repl:2020-07-21-a"
+            ]
         }
     ]
 }
