@@ -6,6 +6,14 @@ import FoundationNetworking
  */
 class Model {
 
+    private let baseUrl: URL
+
+
+    init(baseUrl: String = "https://api.github.com") {
+        self.baseUrl = URL(string: baseUrl)!
+    }
+
+
     /**
      Git リポジトリからデータ取得する
 
@@ -22,21 +30,27 @@ class Model {
         onSuccess: @escaping ([[String: Any]]) -> Void,
         onError: @escaping (Error) -> Void
     ) -> URLSessionDataTask {
-        do {
-            let url = URL(string: "https://api.github.com/orgs/\(organization)/repos")!
-            let request = URLRequest(url: url)
-            return URLSession.shared.dataTask(with: request) { data, _, error in
+        let url = baseUrl.appendingPathComponent("orgs")
+                    .appendingPathComponent("\(organization)")
+                    .appendingPathComponent("repos")
+        let request = URLRequest(url: url)
+
+        let session = URLSession.shared
+        return session.dataTask(with: request) { data, _, error in
+            // TODO: エラーパターンをenum 定義したい
+            do {
                 if let error = error {
                     onError(error)
                     return
                 }
 
-                let json = try! JSONSerialization.jsonObject(with: data!)
+                // TODO: Decodable を使って分解したい
+                let json = try JSONSerialization.jsonObject(with: data!)
                 let result = json as! [[String: Any]]
                 onSuccess(result)
+            } catch {
+                onError(error)
             }
-        } catch {
-            onError(error)
         }
     }
 }
