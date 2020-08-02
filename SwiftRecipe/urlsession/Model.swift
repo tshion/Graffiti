@@ -7,6 +7,7 @@ import FoundationNetworking
 class Model {
 
     private let baseUrl: URL
+    private let decoder = JSONDecoder()
 
 
     init(baseUrl: String = "https://api.github.com") {
@@ -27,7 +28,7 @@ class Model {
      */
     func fetchGitRepo(
         organization: String,
-        onSuccess: @escaping ([[String: Any]]) -> Void,
+        onSuccess: @escaping ([FetchGitRepoResponseItem]) -> Void,
         onError: @escaping (Error) -> Void
     ) -> URLSessionDataTask {
         let url = baseUrl.appendingPathComponent("orgs")
@@ -44,9 +45,7 @@ class Model {
                     return
                 }
 
-                // TODO: Decodable を使って分解したい
-                let json = try JSONSerialization.jsonObject(with: data!)
-                let result = json as! [[String: Any]]
+                let result = try decoder.decode([FetchGitRepoResponseItem].self, from: data!)
                 onSuccess(result)
             } catch {
                 onError(error)
