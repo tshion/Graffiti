@@ -45,7 +45,7 @@ class Model {
                     return
                 }
 
-                let result = try decoder.decode([FetchGitRepoResponseItem].self, from: data!)
+                let result = try self.decoder.decode([FetchGitRepoResponseItem].self, from: data!)
                 onSuccess(result)
             } catch {
                 onError(error)

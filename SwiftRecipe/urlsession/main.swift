@@ -1,22 +1,11 @@
 import Foundation
 
-print("aaaa")
 
-let model = Model()
-let task = model.fetchGitRepo(
-    organization: "apple",
-    onSuccess: { json in
-        DispatchQueue.global().async {
-            print(json)
-        }
-    },
-    onError: { error in
-        DispatchQueue.global().async {
-            print(error)
-        }
-    }
-)
-task.resume()
+print("start")
+
+let view = View()
+view.onStart()
 Thread.sleep(forTimeInterval: 1)
+view.onStop()
 
-print("bbbb")
+print("finish")
