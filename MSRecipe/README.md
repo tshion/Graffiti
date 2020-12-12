@@ -3,6 +3,7 @@ Microsoft 関連技術、主にC# 関連の落書き＆レシピ集
 
 プロジェクト | VS | VS4Mac | VSCode | 概要
 --- | :---: | :---: | :---: | ---
+[BlazorWasmModule](./BlazorWasmModule) | 〇 | ? | ? | WebAssembly を得るためのプロジェクト
 [ConsoleCore](./ConsoleCore) | ○ | ○ | ? | .NET Core のConsole Application Project
 [ConsoleNET](./ConsoleNET) | ○ | × | ? | .NET Framework のConsole Application Project
 [LibraryStandard] | × | × | × | .NET Standard のライブラリプロジェクト
