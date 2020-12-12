@@ -8,10 +8,11 @@
 </head>
 <body>
     <script src="_framework/blazor.webassembly.js" autostart="false"></script>
-    <script src="blazorWasmModule.js"></script>
     <script>
         Blazor.start({}).then(() => {
-            blazorWasmModule.sayHello('1st');
+            DotNet.invokeMethodAsync('BlazorWasmModule', 'SayHello', `1st`).then(result => {
+                alert(result);
+            });
         });
     </script>
 </body>
