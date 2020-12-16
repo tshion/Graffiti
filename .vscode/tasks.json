@@ -46,7 +46,7 @@
                 "53703:53703",
                 "-v",
                 "${workspaceFolder}/RxJS:/home/worker",
-                "tshion/ionic-repl:6.11.1.0"
+                "tshion/ionic-repl:6.12.3"
             ],
         },
         {

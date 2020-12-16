@@ -8,7 +8,7 @@ pkgName=work.shion.xapprecipe
 
 # 定数定義
 cntName=Setupper
-ionrepl=6.9.3.0
+ionrepl=6.12.3
 mountPath=$(pwd)/mount
 ngrepl=9.1.7.0
 
