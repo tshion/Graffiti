@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drag and Drop!</title>
+
+    <style>
+        #memoArea {
+            background-color: #EEEEEE;
+            border: solid #999999 1px;
+            height: 480px;
+            padding: 10px;
+            width: 620px;
+        }
+
+        .memo {
+            border: solid #999999 1px;
+            color: #000000;
+            height: 40px;
+            left: 50px;
+            padding: 10px;
+            position: absolute;
+            text-decoration: none;
+            top: 80px;
+            width: 180px;
+        }
+
+        .yellow {
+            background-color: #FFFFCC;
+        }
+
+        .red {
+            background-color: #FFCCCC;
+        }
+
+        .green {
+            background-color: #CCFFCC;
+        }
+
+        form {
+            background-color: #CCCCCC;
+            border: solid #999999 1px;
+            padding: 10px;
+            width: 620px;
+        }
+
+        #trashArea {
+            background-color: #6699CC;
+            border: dashed #333366 1px;
+            color: #FFFFFF;
+            height: 100px;
+            padding: 10px;
+            width: 620px;
+        }
+    </style>
+</head>
+
+<body onload="loadMemo()">
+    <form>
+        <input type="text" id="memoText" size="50" placeholder="メモを入力してください">
+        <input type="radio" name="memoColor" id="memoY" checked>黄色
+        <input type="radio" name="memoColor" id="memoR">赤色
+        <input type="radio" name="memoColor" id="memoG">緑色
+        <input type="button" value="付箋紙を貼る" onclick="addMemo()">
+    </form>
+    <div id="memoArea" ondragover="dragOverMemo(event)" ondrop="dropMemo(event)"></div>
+    <div id="trashArea" ondragover="dragOverMemo(event)" ondrop="dropTrash(event)">ゴミ箱</div>
+
+    <script>
+        var offsetX = 0;
+        var offsetY = 0;
+        var memoCurrentId = 1;
+        var memoArray = new Array();
+
+        function Memo(id, text, color, x, y) {
+            this.id = "memo" + id;
+            this.text = text;
+            this.color = color;
+            this.x = x;
+            this.y = y;
+
+            this.create = function () {
+                var memoElement = document.createElement("a");
+                memoElement.href = "#";
+                memoElement.id = this.id;
+                memoElement.className = "memo " + this.color;
+                memoElement.draggable = true;
+                memoElement.ondragstart = dragMemo;
+                memoElement.innerHTML = this.text;
+
+                var memoArea = document.getElementById("memoArea");
+                memoArea.appendChild(memoElement);
+            }
+        }
+
+        Memo.prototype.move = function (x, y) {
+            this.x = x;
+            this.y = y;
+
+            var memoElement = document.getElementById(this.id);
+            memoElement.style.left = x + "px";
+            memoElement.style.top = y + "px";
+        }
+
+        Memo.prototype.remove = function () {
+            var memoElement = document.getElementById(this.id);
+            var memoArea = document.getElementById("memoArea");
+            memoArea.removeChild(memoElement);
+            localStorage.removeItem(this.id);
+        }
+
+        Memo.prototype.save = function () {
+            var memoJSON = {
+                "text": this.text,
+                "color": this.color,
+                "x": this.x,
+                "y": this.y
+            }
+
+            var memoStringJSON = JSON.stringify(memoJSON);
+            localStorage.setItem(this.id, memoStringJSON);
+        }
+
+        function dragMemo(event) {
+            event.dataTransfer.setData("text", event.target.id);
+            var memoElement = document.getElementById(event.target.id);
+            offsetX = event.clientX - memoElement.offsetLeft;
+            offsetY = event.clientY - memoElement.offsetTop;
+        }
+
+        function dropMemo(event) {
+            var id = event.dataTransfer.getData("text");
+            var memo = memoArray[id];
+            memo.move(event.clientX - offsetX, event.clientY - offsetY);
+            memo.save();
+        }
+
+        function dragOverMemo(event) {
+            event.preventDefault();
+        }
+
+        function addMemo() {
+            var memoText = document.getElementById("memoText").value;
+            var memoColor = "yellow";
+            if (document.getElementById("memoY").checked) {
+                memoColor = "yellow";
+            }
+            if (document.getElementById("memoR").checked) {
+                memoColor = "red";
+            }
+            if (document.getElementById("memoG").checked) {
+                memoColor = "green";
+            }
+
+            var memo = new Memo(memoCurrentId, memoText, memoColor, 50, 80);
+            memo.create();
+            memo.save();
+            memoArray[memo.id] = memo;
+
+            memoCurrentId++;
+
+            localStorage.setItem("memoCurrentId", memoCurrentId);
+        }
+
+        function dropTrash(event) {
+            var id = event.dataTransfer.getData("text");
+            var memo = memoArray[id];
+            memo.remove();
+            delete memoArray[id];
+        }
+
+        function loadMemo() {
+            memoCurrentId = localStorage.getItem("memoCurrentId");
+            if (memoCurrentId == null) {
+                memoCurrentId = 1;
+            }
+
+            for (var i = 1; i < memoCurrentId; i++) {
+                var memoId = "memo" + i;
+                var memoJSON = localStorage.getItem(memoId);
+
+                if (memoJSON != null) {
+                    var memoData = JSON.parse(memoJSON);
+
+                    var memoText = memoData.text;
+                    var memoColor = memoData.color;
+                    var memoX = memoData.x;
+                    var memoY = memoData.y;
+
+                    var memo = new Memo(i, memoText, memoColor, memoX, memoY);
+                    memo.create();
+                    memo.move(memo.x, memo.y);
+                    memoArray[memo.id] = memo;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
