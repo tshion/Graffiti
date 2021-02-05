@@ -91,6 +91,14 @@
                 memoElement.ondragstart = dragMemo;
                 memoElement.innerHTML = this.text;
 
+                memoElement.addEventListener('click', event => {
+                    const area = document.getElementById("memoArea");
+                    const target = document.getElementById(this.id);
+
+                    // 最前面に移動
+                    area.appendChild(target);
+                }, false) ;
+
                 var memoArea = document.getElementById("memoArea");
                 memoArea.appendChild(memoElement);
             }
