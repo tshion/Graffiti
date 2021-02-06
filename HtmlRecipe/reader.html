@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Reader</title>
+</head>
+
+<body>
+
+    <form>
+        <label for="file">ファイル：</label>
+        <input id="fileSelector" name="file" type="file">
+    </form>
+    <audio id="resultSound"></audio>
+    <img id="resultImg" />
+    <p id="resultText"></p>
+    <video id="resultMovie"></video>
+
+    <script>
+        const $fileSelector = document.getElementById('fileSelector');
+        const $resultSound = document.getElementById('resultSound');
+        const $resultImg = document.getElementById('resultImg');
+        const $resultText = document.getElementById('resultText');
+        const $resultMovie = document.getElementById('resultMovie');
+
+        const reader = new FileReader();
+
+        reader.addEventListener('load', event => {
+            const input = $fileSelector.files[0];
+            console.log(input.type);
+            switch (input.type) {
+                case 'audio/mpeg':
+                case 'audio/webm':
+                    $resultSound.src = reader.result;
+                    $resultSound.play();
+                    break;
+                case 'image/png':
+                    $resultImg.src = reader.result;
+                    break;
+                case 'text/plain':
+                    $resultText.innerText = reader.result;
+                    break;
+                case 'video/mp4':
+                case 'video/webm':
+                    $resultMovie.src = reader.result;
+                    $resultMovie.play();
+                    break;
+                default:
+                    alert(`Couldn't support!`);
+                    break;
+            }
+        }, false);
+
+        $fileSelector.addEventListener('change', event => {
+            const input = $fileSelector.files[0];
+            if (input.type === 'text/plain') {
+                reader.readAsText(input, 'UTF-8');
+            } else {
+                reader.readAsDataURL(input);
+            }
+        }, false);
+    </script>
+</body>
+
+</html>
