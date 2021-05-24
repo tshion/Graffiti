@@ -59,7 +59,7 @@
                 "-it",
                 "-v",
                 "${workspaceFolder}/SwiftRecipe:/home/worker",
-                "tshion/swift-repl:2021-04-15-a"
+                "tshion/swift-repl:2021-05-14-a"
             ]
         }
     ]
