@@ -33,7 +33,7 @@
                 "53703:53703",
                 "-v",
                 "${workspaceFolder}/RxJS:/home/worker",
-                "tshion/ionic-repl:6.16.3"
+                "tshion/ionic-repl:6.17.1"
             ],
         },
         {
