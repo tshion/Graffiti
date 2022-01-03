@@ -22,4 +22,5 @@ jobs:
       env:
         USERNAME: ${{ github.actor }}
         TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: AndroidLibrarySample/gradlew publish
+      run: ./gradlew publish
+      working-directory: ./AndroidLibrarySample
