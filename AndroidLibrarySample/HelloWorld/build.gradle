@@ -58,9 +58,7 @@ afterEvaluate {
             gpr(MavenPublication) {
                 from components.release
 
-                artifactId = archivesBaseName
-//                artifactId = 'HelloWorld'
-//                groupId = 'io.github.tshion'
+                artifactId = 'helloworld'
                 version = '1.0.0'
                 artifact sourcesJar
 
