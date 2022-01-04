@@ -59,6 +59,7 @@ afterEvaluate {
                 from components.release
 
                 artifactId = 'helloworld'
+                groupId = 'io.github.tshion'
                 version = '1.0.0'
                 artifact sourcesJar
 
