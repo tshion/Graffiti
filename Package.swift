@@ -21,10 +21,10 @@ let package = Package(
         .target(
             name: "HelloWorld",
             dependencies: [],
-            path: "Sources"),
+            path: "SwiftRecipe/HelloWorld/Sources"),
         .testTarget(
             name: "HelloWorldTests",
             dependencies: ["HelloWorld"],
-            path: "Tests"),
+            path: "SwiftRecipe/HelloWorld/Tests"),
     ]
 )
