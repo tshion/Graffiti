@@ -56,7 +56,7 @@ afterEvaluate {
             }
         }
         publications {
-            gpr(MavenPublication) {
+            release(MavenPublication) {
                 from components.release
                 artifact javadocJar
                 artifact sourcesJar
@@ -64,21 +64,6 @@ afterEvaluate {
                 artifactId = 'helloworld'
                 groupId = 'com.github.tshion'
                 version = '1.0.0'
-
-                pom.withXml {
-                    def dependenciesNode = asNode().getAt('dependencies')[0] ?: asNode().appendNode('dependencies')
-
-                    // Iterate over the implementation dependencies (we don't want the test ones), adding a <dependency> node for each
-                    configurations.implementation.allDependencies.each {
-                        // Ensure dependencies such as fileTree are not included.
-                        if (it.name != 'unspecified') {
-                            def dependencyNode = dependenciesNode.appendNode('dependency')
-                            dependencyNode.appendNode('groupId', 'io.github.tshion')
-                            dependencyNode.appendNode('artifactId', 'HelloWorld')
-                            dependencyNode.appendNode('version', it.version)
-                        }
-                    }
-                }
             }
         }
     }
