@@ -2,6 +2,7 @@ plugins {
     id 'com.android.library'
     id 'kotlin-android'
     id 'maven-publish'
+    id 'org.jetbrains.dokka'
 }
 
 android {
@@ -84,15 +85,9 @@ afterEvaluate {
 }
 
 
-task javadoc(type: Javadoc) {
-    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
-    excludes = ['**/*.kt']
-    source = android.sourceSets.main.java.srcDirs
-}
-
-task javadocJar(type: Jar, dependsOn: javadoc) {
+task javadocJar(type: Jar, dependsOn: "dokkaJavadoc") {
     archiveClassifier.set("javadoc")
-    from javadoc.destinationDir
+    from dokkaJavadoc.outputDirectory
 }
 
 task sourcesJar(type: Jar) {
