@@ -5,6 +5,8 @@ plugins {
     id 'org.jetbrains.dokka'
 }
 
+version = '0.0.1'
+
 android {
     compileSdk 31
 
@@ -12,7 +14,7 @@ android {
         minSdk 23
         targetSdk 31
         versionCode 1
-        versionName "1.0"
+        versionName version
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         consumerProguardFiles "consumer-rules.pro"
@@ -58,16 +60,15 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 from components.release
-
-                artifactId = 'helloworld'
-                groupId = 'com.github.tshion'
-                version = '1.0.0'
-
                 artifact javadocJar {
                     classifier = 'javadoc'
                     extension = 'jar'
                 }
                 artifact sourcesJar
+
+                artifactId = 'helloworld'
+                groupId = 'com.github.tshion'
+                version = this.version
             }
         }
     }
