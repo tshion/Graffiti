@@ -58,12 +58,16 @@ afterEvaluate {
         publications {
             release(MavenPublication) {
                 from components.release
-                artifact javadocJar
-                artifact sourcesJar
 
                 artifactId = 'helloworld'
                 groupId = 'com.github.tshion'
                 version = '1.0.0'
+
+                artifact javadocJar {
+                    classifier = 'javadoc'
+                    extension = 'jar'
+                }
+                artifact sourcesJar
             }
         }
     }
