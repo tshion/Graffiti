@@ -18,10 +18,8 @@ yaml = YAML.load(text)
 targets = yaml["jdk"]
 
 # 文字列中の数字を"?" に置換する
-replaced = []
-targets.each do |t|
-    replaced << t.gsub(/\d/, "?")
-end
+# NOTE: 今回は処理の流れを分解するために、説明変数に代入する
+replaced = targets.map { _1.gsub(/\d/, "?") }
 
 # JSON に出力する
 result = { jdk: replaced }
