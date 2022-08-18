@@ -30,6 +30,11 @@ namespace NUnitLibraryStandard
                 title = title.Value,
                 updated = updated.Value,
             };
+
+
+            Assert.IsNotEmpty(data.subtitle);
+            Assert.IsNotEmpty(data.title);
+            Assert.AreEqual("Android Developers Blog", data.title);
         }
     }
 }
