@@ -5,10 +5,10 @@ using System.Xml.Linq;
 namespace NUnitLibraryStandard
 {
     [TestFixture]
-    internal class AndroidDeveloperBlogTest
+    internal class FetchFeedTest
     {
         [Test]
-        public void Test()
+        public void AndroidDeveloperBlog()
         {
             XNamespace xmlns = "http://www.w3.org/2005/Atom";
             var root = XElement.Load("https://feeds.feedburner.com/blogspot/hsDu");
