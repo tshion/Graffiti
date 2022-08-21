@@ -90,5 +90,29 @@ namespace NUnitLibraryStandard
             }).ToList();
             Assert.IsNotEmpty(data);
         }
+
+        [Test]
+        public void YahooJapanTechBlog()
+        {
+            var root = XElement.Load("https://techblog.yahoo.co.jp/index.xml");
+
+            var channels = root.Descendants("channel");
+
+            var link = channels.Descendants("link").FirstOrDefault();
+            Assert.AreEqual("https://techblog.yahoo.co.jp/", link.Value);
+            var title = channels.Descendants("title").FirstOrDefault();
+            Assert.AreEqual("Yahoo! JAPAN Tech Blog", title.Value);
+
+            var items = channels.Descendants("item");
+            var data = items.Select(item => new
+            {
+                description = item.Descendants("description").FirstOrDefault().Value,
+                guid = item.Descendants("guid").FirstOrDefault().Value,
+                link = item.Descendants("link").FirstOrDefault().Value,
+                //pubDate = DateTime.Parse(item.Descendants("pubDate").FirstOrDefault().Value),
+                title = item.Descendants("title").FirstOrDefault().Value,
+            }).ToList();
+            Assert.IsNotEmpty(data);
+        }
     }
 }
