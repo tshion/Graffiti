@@ -1,4 +1,5 @@
 ﻿using NUnit.Framework;
+using System;
 using System.Linq;
 using System.Xml.Linq;
 
@@ -12,29 +13,30 @@ namespace NUnitLibraryStandard
         {
             XNamespace xmlns = "http://www.w3.org/2005/Atom";
             var root = XElement.Load("https://feeds.feedburner.com/blogspot/hsDu");
-
-            var entries = root.Descendants(xmlns + "entry");
-            var subtitle = root.Descendants(xmlns + "subtitle").FirstOrDefault();
-            var title = root.Descendants(xmlns + "title").FirstOrDefault();
-            var updated = root.Descendants(xmlns + "updated").FirstOrDefault();
-
-            var data = new
+            var source = root.Descendants(xmlns + "title").First().Value;
+            var sample = root.Descendants(xmlns + "entry").Select(entry =>
             {
-                items = entries.Select(e => new
+                try
                 {
-                    content = e.Descendants(xmlns + "content").FirstOrDefault().Value,
-                    title = e.Descendants(xmlns + "title").FirstOrDefault().Value,
-                    updated = root.Descendants(xmlns + "updated").FirstOrDefault().Value,
-                }).ToList(),
-                subtitle = subtitle.Value,
-                title = title.Value,
-                updated = updated.Value,
-            };
-
-
-            Assert.IsNotEmpty(data.subtitle);
-            Assert.IsNotEmpty(data.title);
-            Assert.AreEqual("Android Developers Blog", data.title);
+                    var link = entry.Descendants(xmlns + "link")
+                        .Single(x => x.Attribute("rel")?.Value == "alternate")
+                        .Attribute("href");
+                    return new
+                    {
+                        Link = new Uri(link!.Value),
+                        Source = source,
+                        Summary = "",
+                        Title = entry.Descendants(xmlns + "title").Single().Value,
+                        Updated = DateTime.Parse(entry.Descendants(xmlns + "updated").First().Value)
+                    };
+                }
+                catch (Exception)
+                {
+                    return null;
+                }
+            }).Where(item => item != null).Select(item => item!)
+            .ToList();
+            Assert.IsNotEmpty(sample);
         }
 
         [Test]
@@ -42,29 +44,27 @@ namespace NUnitLibraryStandard
         {
             XNamespace xmlns = "http://www.w3.org/2005/Atom";
             var root = XElement.Load("https://developer.android.com/feeds/androidx-release-notes.xml");
-
-            var entries = root.Descendants(xmlns + "entry");
-            var subtitle = root.Descendants(xmlns + "subtitle").FirstOrDefault();
-            var title = root.Descendants(xmlns + "title").FirstOrDefault();
-            var updated = root.Descendants(xmlns + "updated").FirstOrDefault();
-
-            var data = new
+            var source = root.Descendants(xmlns + "title").First().Value;
+            var sample = root.Descendants(xmlns + "entry").Select(entry =>
             {
-                items = entries.Select(e => new
+                try
                 {
-                    content = e.Descendants(xmlns + "content").FirstOrDefault().Value,
-                    title = e.Descendants(xmlns + "title").FirstOrDefault().Value,
-                    updated = root.Descendants(xmlns + "updated").FirstOrDefault().Value,
-                }).ToList(),
-                subtitle = subtitle?.Value ?? "",
-                title = title.Value,
-                updated = updated.Value,
-            };
-
-
-            Assert.IsEmpty(data.subtitle);
-            Assert.IsNotEmpty(data.title);
-            Assert.AreEqual("AndroidX - Release Notes", data.title);
+                    return new
+                    {
+                        Link = new Uri(entry.Descendants(xmlns + "link").First().Attribute("href").Value),
+                        Source = source,
+                        Summary = "",
+                        Title = entry.Descendants(xmlns + "title").First().Value,
+                        Updated = DateTime.Parse(entry.Descendants(xmlns + "updated").First().Value)
+                    };
+                }
+                catch (Exception)
+                {
+                    return null;
+                }
+            }).Where(item => item != null).Select(item => item!)
+            .ToList();
+            Assert.IsNotEmpty(sample);
         }
 
         [Test]
