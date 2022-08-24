@@ -5,6 +5,22 @@ using System.Xml.Linq;
 
 namespace NUnitLibraryStandard
 {
+    /// <summary>
+    /// TODO
+    /// * Developers I/O
+    /// * Firebase
+    /// * Google Play Services
+    /// * Hyperion
+    /// * Material
+    /// * Moshi
+    /// * O'Reilly
+    /// * OkHttp
+    /// * Picasso
+    /// * Retrofit
+    /// * Robolectric
+    /// * Zxing
+    /// * 技術評論社
+    /// </summary>
     [TestFixture]
     internal class FetchFeedTest
     {
