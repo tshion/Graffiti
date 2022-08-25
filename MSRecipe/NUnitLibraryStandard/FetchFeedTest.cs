@@ -1,4 +1,4 @@
-﻿using NUnit.Framework;
+using NUnit.Framework;
 using System;
 using System.Linq;
 using System.Xml.Linq;
@@ -7,17 +7,23 @@ namespace NUnitLibraryStandard
 {
     /// <summary>
     /// TODO
+    /// * Angular
     /// * Developers I/O
     /// * Firebase
     /// * Google Play Services
     /// * Hyperion
     /// * Material
     /// * Moshi
+    /// * Node.js
     /// * O'Reilly
     /// * OkHttp
     /// * Picasso
     /// * Retrofit
     /// * Robolectric
+    /// * Swift
+    /// * TypeScript
+    /// * Visual Studio
+    /// * Visual Studio Code
     /// * Zxing
     /// * 技術評論社
     /// </summary>
