@@ -1,6 +1,10 @@
-using NUnit.Framework;
+﻿using NUnit.Framework;
 using System;
+using System.Globalization;
 using System.Linq;
+using System.Net.Http;
+using System.Text.RegularExpressions;
+using System.Threading.Tasks;
 using System.Xml.Linq;
 
 namespace NUnitLibraryStandard
@@ -10,7 +14,6 @@ namespace NUnitLibraryStandard
     /// * Angular
     /// * Developers I/O
     /// * Firebase
-    /// * Google Play Services
     /// * Hyperion
     /// * Material
     /// * Moshi
@@ -111,6 +114,32 @@ namespace NUnitLibraryStandard
                 title = item.Descendants("title").FirstOrDefault().Value,
             }).ToList();
             Assert.IsNotEmpty(data);
+        }
+
+        [Test]
+        public async Task GooglePlayServices()
+        {
+            using HttpClient client = new();
+            var response = await client.GetStringAsync("https://developers.google.com/android/guides/releases?hl=en");
+
+            var formatted1 = Regex.Replace(response, @">\s+<", "><");
+            var formatted2 = Regex.Replace(formatted1, @"\s+", " ");
+
+            var matches = Regex.Matches(
+                formatted2,
+                @"id=""([a-z]+_[0-3]\d_\d{4})"""
+            );
+
+            var result = matches.Select(x =>
+            {
+                var tokens = x.Groups[1].Value.Split("_");
+                return new
+                {
+                    Title = $"{CultureInfo.CurrentCulture.TextInfo.ToTitleCase(tokens[0])} {tokens[1]}, {tokens[2]}",
+                    Url = $"https://developers.google.com/android/guides/releases?hl=en#{x.Groups[1].Value}",
+                };
+            }).ToList();
+            Assert.IsNotEmpty(result);
         }
 
         [Test]
