@@ -119,26 +119,39 @@ namespace NUnitLibraryStandard
         [Test]
         public async Task GooglePlayServices()
         {
+            var url = "https://developers.google.com/android/guides/releases?hl=en";
+
             using HttpClient client = new();
-            var response = await client.GetStringAsync("https://developers.google.com/android/guides/releases?hl=en");
+            var response = await client.GetStringAsync(url);
 
-            var formatted1 = Regex.Replace(response, @">\s+<", "><");
-            var formatted2 = Regex.Replace(formatted1, @"\s+", " ");
+            var divider = "\t";
+            var intro = @"id=""";
+            var limit = 50;
+            var blocks = response.Replace(intro, $"{divider}{intro}")
+                .Split(divider)[1..]
+                .Select(x => x[..limit]);
 
-            var matches = Regex.Matches(
-                formatted2,
-                @"id=""([a-z]+_[0-3]\d_\d{4})"""
-            );
-
-            var result = matches.Select(x =>
-            {
-                var tokens = x.Groups[1].Value.Split("_");
-                return new
+            var pattern = intro + @"([a-z]+_?[0-3]?\d?_\d{4}).*""";
+            var result = blocks
+                .Select(x => Regex.Match(x, pattern))
+                .Where(x => x.Success)
+                .Select(x =>
                 {
-                    Title = $"{CultureInfo.CurrentCulture.TextInfo.ToTitleCase(tokens[0])} {tokens[1]}, {tokens[2]}",
-                    Url = $"https://developers.google.com/android/guides/releases?hl=en#{x.Groups[1].Value}",
-                };
-            }).ToList();
+                    var culture = CultureInfo.CreateSpecificCulture("en-US");
+                    var part = x.Groups[1].Value.Split("_");
+
+                    var date = 2 < part.Length
+                        ? DateTime.Parse($"{part[0]} {part[1]}, {part[2]}")
+                        : DateTime.Parse($"{part[0]} 1, {part[1]}");
+                    var prefix = 2 < part.Length ? "" : "Around";
+                    return new
+                    {
+                        Date = date,
+                        Title = $"{prefix} {date.ToString("MMMM dd, yyyy", culture)}",
+                        Url = $"{url}#{x.Groups[1].Value}",
+                    };
+                })
+                .ToList();
             Assert.IsNotEmpty(result);
         }
 
