@@ -13,7 +13,6 @@ namespace NUnitLibraryStandard
     /// TODO
     /// * Angular
     /// * Developers I/O
-    /// * Firebase
     /// * Hyperion
     /// * Material
     /// * Moshi
@@ -114,6 +113,45 @@ namespace NUnitLibraryStandard
                 title = item.Descendants("title").FirstOrDefault().Value,
             }).ToList();
             Assert.IsNotEmpty(data);
+        }
+
+        [Test]
+        public async Task Firebase()
+        {
+            var url = "https://firebase.google.com/support/releases";
+
+            using HttpClient client = new();
+            var response = await client.GetStringAsync(url);
+
+            var divider = "\t";
+            var intro = @"id=""";
+            var limit = 50;
+            var blocks = response.Replace(intro, $"{divider}{intro}")
+                .Split(divider)[1..]
+                .Select(x => x[..limit]);
+
+            var pattern = intro + @"([a-z]+_[0-3]?\d_\d{4}).*""";
+            var result = blocks
+                .Select(x => Regex.Match(x, pattern))
+                .Where(x => x.Success)
+                .Select(x =>
+                {
+                    var culture = CultureInfo.CreateSpecificCulture("en-US");
+                    var part = x.Groups[1].Value.Split("_");
+
+                    var date = 2 < part.Length
+                        ? DateTime.Parse($"{part[0]} {part[1]}, {part[2]}")
+                        : DateTime.Parse($"{part[0]} 1, {part[1]}");
+                    var prefix = 2 < part.Length ? "" : "Around";
+                    return new
+                    {
+                        Date = date,
+                        Title = $"{prefix} {date.ToString("MMMM dd, yyyy", culture)}",
+                        Url = $"{url}#{x.Groups[1].Value}",
+                    };
+                })
+                .ToList();
+            Assert.IsNotEmpty(result);
         }
 
         [Test]
