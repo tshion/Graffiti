@@ -194,6 +194,57 @@ namespace NUnitLibraryStandard
         }
 
         [Test]
+        public async Task Kotlin()
+        {
+            var url = "https://kotlinlang.org/docs/releases.html";
+
+            using HttpClient client = new();
+            var response = await client.GetStringAsync(url);
+
+            var divider = "\t";
+            var intro = "tr ";
+            var blocks = response.Replace(intro, $"{divider}{intro}")
+                .Split(divider)[1..];
+
+            var patternDate = @"<b.+>([A-Z][a-z]+ [0-3]?\d, \d{4})</b>";
+            var patternId = intro + @".+id=""([a-f\d]+)""";
+            var patternVersion = @"<b.+>(\d+\.\d+\.\d+)</b>";
+            var result = blocks
+                .Select(x =>
+                    (
+                        regexId: Regex.Match(x, patternId),
+                        x
+                    )
+                )
+                .Where(tuple => tuple.regexId.Success)
+                .Select(tuple =>
+                    (
+                        regexDate: Regex.Match(tuple.x, patternDate),
+                        tuple.regexId,
+                        regexVersion: Regex.Match(tuple.x, patternVersion)
+                    )
+                )
+                .Where(tuple => tuple.regexDate.Success && tuple.regexVersion.Success)
+                .Select(tuple =>
+                {
+                    var culture = CultureInfo.CreateSpecificCulture("en-US");
+
+                    var date = DateTime.Parse(tuple.regexDate.Groups[1].Value);
+                    var id = tuple.regexId.Groups[1].Value;
+                    var version = tuple.regexVersion.Groups[1].Value;
+
+                    return new
+                    {
+                        Date = date,
+                        Title = $"{version} (Released: {date.ToString("MMMM dd, yyyy", culture)})",
+                        Url = $"{url}#{id}",
+                    };
+                })
+                .ToList();
+            Assert.IsNotEmpty(result);
+        }
+
+        [Test]
         public void YahooJapanTechBlog()
         {
             var root = XElement.Load("https://techblog.yahoo.co.jp/index.xml");
