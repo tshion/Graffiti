@@ -1,0 +1,13 @@
+name: MySavingReminders
+options:
+  developmentLanguage: ja
+  groupSortPosition: top
+settings:
+  PRODUCT_BUNDLE_IDENTIFIER: com.github.tshion.graffiti
+targets:
+  MySavingReminders:
+    deploymentTarget: "13.0"
+    platform: iOS
+    sources:
+      - path: MySavingReminders
+    type: application
