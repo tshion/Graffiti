@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "SwiftRecipe: Debug FileIOs",
+            "program": "${workspaceFolder:Graffiti}/.build/debug/FileIOs",
+            "args": [],
+            "cwd": "${workspaceFolder:Graffiti}",
+            "preLaunchTask": "swift: Build Debug FileIOs"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "SwiftRecipe: Release FileIOs",
+            "program": "${workspaceFolder:Graffiti}/.build/release/FileIOs",
+            "args": [],
+            "cwd": "${workspaceFolder:Graffiti}",
+            "preLaunchTask": "swift: Build Release FileIOs"
+        }
+    ]
+}
