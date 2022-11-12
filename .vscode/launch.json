@@ -17,6 +17,21 @@
             "args": [],
             "cwd": "${workspaceFolder:Graffiti}",
             "preLaunchTask": "swift: Build Release FileIOs"
+        },
+        {
+            "name": "VSC WE: Run",
+            "type": "pwa-extensionHost",
+            "debugWebWorkerHost": true,
+            "cwd": "${workspaceFolder}/vscode-web-extension",
+            "request": "launch",
+            "args": [
+                "--extensionDevelopmentPath=${cwd}",
+                "--extensionDevelopmentKind=web"
+            ],
+            "outFiles": [
+                "${cwd}/dist/web/**/*.js"
+            ],
+            "preLaunchTask": "VSC WE: Watch Web"
         }
     ]
 }

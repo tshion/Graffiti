@@ -48,6 +48,32 @@
                 "${workspaceFolder}/SwiftRecipe:/home/worker",
                 "tshion/swift-repl:2021-12-06-a"
             ]
+        },
+        {
+            "label": "VSC WE: Compile Web",
+            "type": "npm",
+            "path": "vscode-web-extension",
+            "script": "compile-web",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": [
+                "$ts-webpack",
+                "$tslint-webpack"
+            ]
+        },
+        {
+            "label": "VSC WE: Watch Web",
+            "type": "npm",
+            "path": "vscode-web-extension",
+            "script": "watch-web",
+            "group": "build",
+            "isBackground": true,
+            "problemMatcher": [
+                "$ts-webpack-watch",
+                "$tslint-webpack-watch"
+            ]
         }
     ]
 }
