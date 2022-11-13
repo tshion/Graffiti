@@ -10,14 +10,19 @@
     "Other"
   ],
   "activationEvents": [
-    "onCommand:vscode-web-extension.helloWorld"
+    "onCommand:vscode-web-extension.createFile",
+    "onCommand:vscode-web-extension.showFiles"
   ],
   "browser": "./dist/web/extension.js",
   "contributes": {
     "commands": [
       {
-        "command": "vscode-web-extension.helloWorld",
-        "title": "Hello World"
+        "command": "vscode-web-extension.createFile",
+        "title": "Create a file"
+      },
+      {
+        "command": "vscode-web-extension.showFiles",
+        "title": "Show files"
       }
     ]
   },
