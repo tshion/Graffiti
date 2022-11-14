@@ -7,6 +7,7 @@ export const createFile = (name: string) => commands.registerCommand(name, async
         return;
     }
 
+    const decoder = new TextDecoder();
     const encoder = new TextEncoder();
 
     const uri = Uri.joinPath(folder.uri, 'sample.txt');
@@ -14,5 +15,5 @@ export const createFile = (name: string) => commands.registerCommand(name, async
     await workspace.fs.writeFile(uri, newContent);
 
     const content = await workspace.fs.readFile(uri);
-    console.log(content.toString());
+    console.log(decoder.decode(content));
 });
