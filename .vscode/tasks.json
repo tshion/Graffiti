@@ -12,6 +12,22 @@
             ],
         },
         {
+            "label": "Ruby: edit in docker",
+            "type": "shell",
+            "command": "docker",
+            "args": [
+                "run",
+                "--rm",
+                "-it",
+                "-v",
+                "${workspaceFolder}/RubyRecipe:/home/worker",
+                "-w",
+                "/home/worker",
+                "ruby:3.2.2-alpine3.18",
+                "/bin/sh"
+            ]
+        },
+        {
             "label": "RxJS: edit in docker",
             "type": "shell",
             "command": "docker",
