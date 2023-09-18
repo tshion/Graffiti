@@ -17,7 +17,15 @@ func main() {
 		500,
 	)
 
-	file, _ := os.Create("image.pgm")
+	dirPath, err := os.Getwd()
+	if err != nil {
+		panic(err)
+	}
+	distDirPath := dirPath + "/go/dist"
+	if _, err := os.Stat(distDirPath); os.IsNotExist(err) {
+		os.Mkdir(distDirPath, 0777)
+	}
+	file, _ := os.Create(distDirPath + "/image.pgm")
 	defer file.Close()
 
 	file.Write(([]byte)("P2\n"))

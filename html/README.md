@@ -1,4 +1,4 @@
-# HtmlRecipe
+# html/
 HTML5 関連の落書き。
 
 ファイル名 | 概要

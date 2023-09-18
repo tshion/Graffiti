@@ -22,6 +22,8 @@
 ## プロジェクト構成
 パス | 起動方法 | 内容
 --- | --- | ---
+[html/](./html/) | (ディレクトリ内を確認してください) | HTML 関連サンプル
+[go/mandelbrot.go](./go/mandelbrot.go) | `go run ./go/mandelbrot.go` | Go でマンデルブロ集合の算出
 [php/hello.php](./php/hello.php) | `php ./php/hello.php` | PHP のHello World
 [ruby/hello.rb](./ruby/hello.rb) | `ruby ./ruby/hello.rb` | Ruby のHello World
 [ruby/yaml_to_json.rb](./ruby/yaml_to_json.rb) | `ruby ./ruby/yaml_to_json.rb` | Ruby でYaml からJSON 出力する
