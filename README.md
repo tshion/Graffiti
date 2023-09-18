@@ -1,12 +1,22 @@
 # Graffiti
 色々な言語の落書きリポジトリ。
 
-ディレクトリ | 移動 or 起動タスク | 内容
+
+
+## 開発環境
+本リポジトリはマルチプロジェクト構成になっており、
+プロジェクトルートを下記IDE で開いて作業することを想定している。
+
+* Android Studio
+* Visual Studio
+* **Visual Studio Code**
+* Xcode
+
+
+
+## プロジェクト構成
+パス | 起動方法 | 内容
 --- | --- | ---
-[HtmlRecipe](./HtmlRecipe) |  | HTML5 関連の落書き
-[IonicSetupper](./IonicSetupper) |  | Ionic 関連のセットアップスクリプト
-[MandelbrotSet](./MandelbrotSet) | ```Open Mandelbrot``` | マンデルブロ集合を色々な言語で描いてみる
-[MSRecipe](./MSRecipe) |  | Microsoft 関連技術、主にC# 関連の落書き＆レシピ集
-[RubyRecipe](./RubyRecipe/) | ```Ruby: edit in docker``` | Ruby 関連の落書き
-[RxJS](./RxJS) |  | RxJS の練習用リポジトリ
-[SwiftRecipe](./SwiftRecipe) | ```SwiftRecipe: Develop in docker``` | Swift 関連の落書き＆レシピ集
+[php/hello.php](./php/hello.php) | ? | PHP のHello World
+[ruby/hello.rb](./ruby/hello.rb) | ? | Ruby のHello World
+[ruby/yaml_to_json.rb](./ruby/yaml_to_json.rb) | ? | Ruby でYaml からJSON 出力する

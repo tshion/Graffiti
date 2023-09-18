@@ -7,7 +7,7 @@ require 'yaml'
 
 # ファイル読み込み
 text = ""
-File.open("jitpack.yml", "r") { |file|
+File.open("#{Dir.pwd}/ruby/assets/jitpack.yml", "r") { |file|
     text = file.read
 }
 
@@ -22,7 +22,11 @@ targets = yaml["jdk"]
 replaced = targets.map { _1.gsub(/\d/, "?") }
 
 # JSON に出力する
+distPath = "#{Dir.pwd}/ruby/dist"
 result = { jdk: replaced }
-File.open("sample.json", "w+") { |file|
+if !Dir.exist?(distPath) then
+    Dir.mkdir(distPath)
+end
+File.open("#{distPath}/yaml_to.json", "w+") { |file|
     JSON.dump(result, file)
 }
