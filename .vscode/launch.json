@@ -22,14 +22,13 @@
             "name": "VSC WE: Run",
             "type": "pwa-extensionHost",
             "debugWebWorkerHost": true,
-            "cwd": "${workspaceFolder}/vscode-web-extension",
             "request": "launch",
             "args": [
-                "--extensionDevelopmentPath=${cwd}",
+                "--extensionDevelopmentPath=${workspaceFolder}/typescript/vscode-web-extension",
                 "--extensionDevelopmentKind=web"
             ],
             "outFiles": [
-                "${cwd}/dist/web/**/*.js"
+                "${workspaceFolder}/typescript/vscode-web-extension/dist/web/**/*.js"
             ],
             "preLaunchTask": "VSC WE: Watch Web"
         }
