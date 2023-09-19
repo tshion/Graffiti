@@ -2,6 +2,7 @@
     "recommendations": [
         "editorconfig.editorconfig",
         "golang.go",
+        "ms-azuretools.vscode-docker",
         "rebornix.ruby",
         "redhat.vscode-yaml",
     ]

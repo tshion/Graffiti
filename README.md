@@ -22,8 +22,12 @@
 ## プロジェクト構成
 パス | 起動方法 | 内容
 --- | --- | ---
+[docker/gulp/](./docker/gulp/) | `./docker/gulp/docker-compose.yml` を`Compose up` する | Docker を利用したGulp タスクの実行
+[docker/ng-multi.sh](./docker/ng-multi.sh) | `sh ./docker/ng-multi.sh` | Docker を利用して、Ionic + Angular マルチプロジェクト構成の生成
 [html/](./html/) | (ディレクトリ内を確認してください) | HTML 関連サンプル
 [go/mandelbrot.go](./go/mandelbrot.go) | `go run ./go/mandelbrot.go` | Go でマンデルブロ集合の算出
 [php/hello.php](./php/hello.php) | `php ./php/hello.php` | PHP のHello World
 [ruby/hello.rb](./ruby/hello.rb) | `ruby ./ruby/hello.rb` | Ruby のHello World
 [ruby/yaml_to_json.rb](./ruby/yaml_to_json.rb) | `ruby ./ruby/yaml_to_json.rb` | Ruby でYaml からJSON 出力する
+[shell/ngMulti-capacitor.sh](./shell/ngMulti-capacitor.sh) | `sh ./shell/ngMulti-capacitor.sh` | Ionic + Angular マルチプロジェクト構成の生成シェル
+[shell/ngSingle-capacitor.sh](./shell/ngSingle-capacitor.sh) | `sh ./shell/ngSingle-capacitor.sh` | Ionic プロジェクトの生成シェル
