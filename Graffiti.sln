@@ -5,19 +5,20 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "csharp", "csharp", "{8B5A56A0-B5B9-4770-B30E-D25222952B2F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MandelbrotCore", "csharp\MandelbrotCore\MandelbrotCore.csproj", "{483101E7-433D-4309-B38C-7CA1FAA21B03}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MandelbrotCore", "csharp\MandelbrotCore\MandelbrotCore.csproj", "{483101E7-433D-4309-B38C-7CA1FAA21B03}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MandelbrotData", "csharp\MandelbrotData\MandelbrotData.csproj", "{A8D6CDEB-D406-4CED-A5B1-00A181CE16FF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MandelbrotData", "csharp\MandelbrotData\MandelbrotData.csproj", "{A8D6CDEB-D406-4CED-A5B1-00A181CE16FF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MandelbrotExecutor", "csharp\MandelbrotExecutor\MandelbrotExecutor.csproj", "{29D257C0-8F34-4B5A-91AD-51FB0038D669}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MandelbrotExecutor", "csharp\MandelbrotExecutor\MandelbrotExecutor.csproj", "{29D257C0-8F34-4B5A-91AD-51FB0038D669}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloWorld", "csharp\HelloWorld\HelloWorld.csproj", "{5F1303F7-CA6B-4B2C-A739-8E945471AD05}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HelloBlazorWasmWorld", "csharp\HelloBlazorWasmWorld\HelloBlazorWasmWorld.csproj", "{A921CE6A-C870-4A0F-8C7E-D67685D516B1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{483101E7-433D-4309-B38C-7CA1FAA21B03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -32,10 +33,26 @@ Global
 		{29D257C0-8F34-4B5A-91AD-51FB0038D669}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29D257C0-8F34-4B5A-91AD-51FB0038D669}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29D257C0-8F34-4B5A-91AD-51FB0038D669}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5F1303F7-CA6B-4B2C-A739-8E945471AD05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5F1303F7-CA6B-4B2C-A739-8E945471AD05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5F1303F7-CA6B-4B2C-A739-8E945471AD05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5F1303F7-CA6B-4B2C-A739-8E945471AD05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A921CE6A-C870-4A0F-8C7E-D67685D516B1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A921CE6A-C870-4A0F-8C7E-D67685D516B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A921CE6A-C870-4A0F-8C7E-D67685D516B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A921CE6A-C870-4A0F-8C7E-D67685D516B1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{483101E7-433D-4309-B38C-7CA1FAA21B03} = {8B5A56A0-B5B9-4770-B30E-D25222952B2F}
 		{A8D6CDEB-D406-4CED-A5B1-00A181CE16FF} = {8B5A56A0-B5B9-4770-B30E-D25222952B2F}
 		{29D257C0-8F34-4B5A-91AD-51FB0038D669} = {8B5A56A0-B5B9-4770-B30E-D25222952B2F}
+		{5F1303F7-CA6B-4B2C-A739-8E945471AD05} = {8B5A56A0-B5B9-4770-B30E-D25222952B2F}
+		{A921CE6A-C870-4A0F-8C7E-D67685D516B1} = {8B5A56A0-B5B9-4770-B30E-D25222952B2F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BA09F6A8-DA96-4D33-A827-4A8593E98B39}
 	EndGlobalSection
 EndGlobal

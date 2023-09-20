@@ -1,7 +1,6 @@
-﻿using Microsoft.JSInterop;
-using System.Threading.Tasks;
+using Microsoft.JSInterop;
 
-namespace BlazorWasmModule
+namespace HelloBlazorWasmWorld
 {
     /// <summary>
     /// JavaScript へ公開するブリッジ関数
