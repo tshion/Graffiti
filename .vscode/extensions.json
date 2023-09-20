@@ -8,5 +8,6 @@
         "rebornix.ruby",
         "redhat.vscode-yaml",
         "visualstudioexptteam.vscodeintellicode",
+        "vscjava.vscode-java-pack",
     ]
 }

@@ -5,7 +5,7 @@ public class GraphModel {
 
     /**
      * マンデルブロ集合を生成する
-     * 
+     *
      * @param max      最大値
      * @param min      最小値
      * @param size     一辺の大きさ
