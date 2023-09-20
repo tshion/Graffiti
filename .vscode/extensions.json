@@ -3,6 +3,8 @@
         "editorconfig.editorconfig",
         "golang.go",
         "ms-azuretools.vscode-docker",
+        "ms-vscode.cpptools",
+        "ms-vscode.makefile-tools",
         "rebornix.ruby",
         "redhat.vscode-yaml",
         "visualstudioexptteam.vscodeintellicode",
