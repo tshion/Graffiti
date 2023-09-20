@@ -1,8 +1,8 @@
-using Core.Entities;
-using Core.Models;
+using MandelbrotCore.Entities;
+using MandelbrotCore.Models;
 using System.Diagnostics;
 
-namespace Core.UseCases
+namespace MandelbrotCore.UseCases
 {
     /// <summary>
     /// 描画フロー

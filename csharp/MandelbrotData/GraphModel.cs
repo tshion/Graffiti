@@ -1,9 +1,8 @@
-using Core.Entities;
-using Core.Models;
-using System.Linq;
+using MandelbrotCore.Entities;
+using MandelbrotCore.Models;
 using System.Numerics;
 
-namespace DataSource
+namespace MandelbrotData
 {
     /// <summary>
     /// グラフ生成モデル

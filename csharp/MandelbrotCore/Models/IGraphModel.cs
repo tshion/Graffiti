@@ -1,6 +1,6 @@
-using Core.Entities;
+using MandelbrotCore.Entities;
 
-namespace Core.Models
+namespace MandelbrotCore.Models
 {
     /// <summary>
     /// グラフ生成モデルの定義

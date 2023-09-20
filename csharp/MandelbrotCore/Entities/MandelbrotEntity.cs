@@ -1,4 +1,4 @@
-namespace Core.Entities
+namespace MandelbrotCore.Entities
 {
     /// <summary>
     /// マンデルブロ集合を描画する際のパラメータ

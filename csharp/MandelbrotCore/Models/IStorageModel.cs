@@ -1,4 +1,4 @@
-namespace Core.Models
+namespace MandelbrotCore.Models
 {
     /// <summary>
     /// ストレージロジックの定義

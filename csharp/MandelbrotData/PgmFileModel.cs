@@ -1,7 +1,6 @@
-using Core.Models;
-using System.IO;
+using MandelbrotCore.Models;
 
-namespace DataSource
+namespace MandelbrotData
 {
     /// <summary>
     /// PGM 形式の取り扱い
