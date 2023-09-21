@@ -2,15 +2,15 @@
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-// アセンブリに関する一般情報は以下の属性セットをとおして制御されます。
-// 制御されます。アセンブリに関連付けられている情報を変更するには、
+// アセンブリに関する一般的な情報は、次の方法で制御されます
+// アセンブリに関連付けられている情報を変更するには、
 // これらの属性値を変更してください。
 [assembly: AssemblyTitle("MSVSIPAction")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("HP Inc.")]
+[assembly: AssemblyCompany("HP")]
 [assembly: AssemblyProduct("MSVSIPAction")]
-[assembly: AssemblyCopyright("Copyright © HP Inc. 2020")]
+[assembly: AssemblyCopyright("Copyright © HP 2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,9 +20,9 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // このプロジェクトが COM に公開される場合、次の GUID が typelib の ID になります
-[assembly: Guid("2479b331-80ed-41d2-82f6-bd34c5cc8e4c")]
+[assembly: Guid("769ce93e-b737-4113-a039-be6f9b2783c3")]
 
-// アセンブリのバージョン情報は、以下の 4 つの値で構成されています:
+// アセンブリのバージョン情報は次の 4 つの値で構成されています:
 //
 //      メジャー バージョン
 //      マイナー バージョン

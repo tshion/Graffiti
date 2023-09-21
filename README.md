@@ -30,6 +30,7 @@
 [go/mandelbrot.go](./go/mandelbrot.go) | `go run ./go/mandelbrot.go` | Go でマンデルブロ集合の算出
 [java/mandelbrot](./java/mandelbrot/) | `make java-mandelbrot` | Java でマンデルブロ集合の算出
 [javascript/rxjs-server.js](./javascript/rxjs-server.js) | `node ./javascript/rxjs-server.js` | RxJS サンプル用のサーバー起動
+[MSVSIPInstaller/](./MSVSIPInstaller/) | (VS でプロジェクトを右クリックしてビルド → インストールを実行する) | Microsoft Visual Studio Installer Projects の実装サンプル
 [php/hello.php](./php/hello.php) | `php ./php/hello.php` | PHP のHello World
 [ruby/hello.rb](./ruby/hello.rb) | `ruby ./ruby/hello.rb` | Ruby のHello World
 [ruby/yaml_to_json.rb](./ruby/yaml_to_json.rb) | `ruby ./ruby/yaml_to_json.rb` | Ruby でYaml からJSON 出力する
