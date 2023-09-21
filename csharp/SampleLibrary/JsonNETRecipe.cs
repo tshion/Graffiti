@@ -1,10 +1,7 @@
-﻿using Newtonsoft.Json.Linq;
-using System;
-using System.Collections.Generic;
+using Newtonsoft.Json.Linq;
 using System.Diagnostics;
-using System.Linq;
 
-namespace LibraryStandard
+namespace SampleLibrary
 {
     /// <summary>
     /// JSON.NET の実装集

@@ -1,8 +1,6 @@
-﻿using System;
 using System.Diagnostics;
-using NUnit.Framework;
 
-namespace NUnitLibraryStandard
+namespace NUnitSample
 {
     [TestFixture]
     internal class RunCommandTest

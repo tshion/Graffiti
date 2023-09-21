@@ -1,7 +1,6 @@
-﻿using LibraryStandard;
-using NUnit.Framework;
+using SampleLibrary;
 
-namespace NUnitLibraryStandard
+namespace NUnitSample
 {
     [TestFixture]
     class JsonNETRecipeTest
