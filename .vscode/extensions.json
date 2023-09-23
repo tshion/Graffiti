@@ -1,5 +1,6 @@
 {
     "recommendations": [
+        "amodio.tsl-problem-matcher",
         "editorconfig.editorconfig",
         "golang.go",
         "ms-azuretools.vscode-docker",
