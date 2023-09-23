@@ -1,4 +1,4 @@
-protocol ViewContract: class {
+protocol ViewContract: AnyObject {
 
     func hideLoading()
 

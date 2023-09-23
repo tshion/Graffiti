@@ -8,6 +8,7 @@
         "redhat.java",
         "redhat.vscode-yaml",
         "shopify.ruby-lsp",
+        "sswg.swift-lang",
         "visualstudioexptteam.vscodeintellicode",
     ]
 }
