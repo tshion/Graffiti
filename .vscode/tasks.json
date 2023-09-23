@@ -4,68 +4,6 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Open Mandelbrot",
-            "type": "shell",
-            "command": "code",
-            "args": [
-                "MandelbrotSet"
-            ],
-        },
-        {
-            "label": "Ruby: edit in docker",
-            "type": "shell",
-            "command": "docker",
-            "args": [
-                "run",
-                "--rm",
-                "-it",
-                "-v",
-                "${workspaceFolder}/RubyRecipe:/home/worker",
-                "-w",
-                "/home/worker",
-                "ruby:3.2.2-alpine3.18",
-                "/bin/sh"
-            ]
-        },
-        {
-            "label": "RxJS: edit in docker",
-            "type": "shell",
-            "command": "docker",
-            "args": [
-                "run",
-                "--rm",
-                "-it",
-                "-p",
-                "4200:4200",
-                "-p",
-                "8100:8100",
-                "-p",
-                "8887:8887",
-                "-p",
-                "9876:9876",
-                "-p",
-                "35729:35729",
-                "-p",
-                "53703:53703",
-                "-v",
-                "${workspaceFolder}/RxJS:/home/worker",
-                "tshion/ionic-repl:6.17.1"
-            ],
-        },
-        {
-            "label": "SwiftRecipe: Develop in docker",
-            "type": "shell",
-            "command": "docker",
-            "args": [
-                "run",
-                "--rm",
-                "-it",
-                "-v",
-                "${workspaceFolder}/SwiftRecipe:/home/worker",
-                "tshion/swift-repl:2021-12-06-a"
-            ]
-        },
-        {
             "label": "VSC WE: Compile Web",
             "type": "npm",
             "path": "typescript/vscode-web-extension",

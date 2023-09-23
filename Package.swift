@@ -12,6 +12,19 @@ let package = Package(
             name: "FileIOs",
             path: "swift/FileIOs"
         ),
+        .target(
+            name: "HelloWorld",
+            path: "swift/HelloWorld/Sources"
+        ),
+        .testTarget(
+            name: "HelloWorldTests",
+            dependencies: ["HelloWorld"],
+            path: "swift/HelloWorld/Tests"
+        ),
+        .executableTarget(
+            name: "Mandelbrot",
+            path: "swift/Mandelbrot"
+        ),
         .executableTarget(
             name: "UrlSession",
             path: "swift/UrlSession"

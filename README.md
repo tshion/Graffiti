@@ -38,6 +38,8 @@
 [shell/ngMulti-capacitor.sh](./shell/ngMulti-capacitor.sh) | `sh ./shell/ngMulti-capacitor.sh` | Ionic + Angular マルチプロジェクト構成の生成シェル
 [shell/ngSingle-capacitor.sh](./shell/ngSingle-capacitor.sh) | `sh ./shell/ngSingle-capacitor.sh` | Ionic プロジェクトの生成シェル
 [swift/FileIOs/](./swift/FileIOs/) | `swift build` 後に、`.build/debug/FileIOs` を実行する | Swift でファイル入出力の試し書き
+[swift/HelloWorld/](./swift/HelloWorld/) | `swift test` | Swift でユニットテストの試し書き
+[swift/Mandelbrot/](./swift/Mandelbrot/) | `swift build` 後に、`.build/debug/Mandelbrot` を実行する | Swift でマンデルブロ集合の算出
 [swift/UrlSession/](./swift/UrlSession/) | `swift build` 後に、`.build/debug/UrlSession` を実行する | Swift で通信処理の試し書き
 [typescript/rxjs/](./typescript/rxjs/) | package.json から`start` を実行する | RxJS の試し書き
 [typescript/vscode-web-extension/](./typescript/vscode-web-extension/) | VSCode の起動タスク`VSC WE: Run` を実行する | VSCode の自作Web 拡張機能の試し書き
