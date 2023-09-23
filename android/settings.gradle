@@ -6,6 +6,6 @@ dependencyResolutionManagement {
         jcenter() // Warning: this repository is going to shut down soon
     }
 }
-rootProject.name = "AndroidLibrarySample"
+rootProject.name = "graffiti"
 include ':app'
 include ':HelloWorld'

@@ -1,4 +1,4 @@
-package io.github.tshion.HelloWorld
+package com.github.tshion.graffiti.HelloWorld
 
 /**
  * Hello World するためのビジネスロジック
