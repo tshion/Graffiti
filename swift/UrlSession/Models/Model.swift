@@ -1,5 +1,7 @@
 import Foundation
-import FoundationNetworking
+#if os(Linux)
+    import FoundationNetworking
+#endif
 
 /**
  * ビジネスロジック
