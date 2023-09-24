@@ -1,64 +1,129 @@
 # Graffiti
 色々なプログラミング言語の試し書きリポジトリ。
 
+## 開発環境の整備メモ
 基本的には[Visual Studio Code](https://code.visualstudio.com/) でプロジェクトルートを開き、
 実行環境を整備することで、試すことが出来ます。
-詳細は各ディレクトリーを確認してください。
 
-* [android/](./android/) → Android 関連の試し書き
-    * [Android Studio](https://developer.android.com/studio) で[android/](./android/) を開いてください
-* [cpp/](./cpp/) → C++ の試し書き
-* [csharp/](./csharp/) → C# の試し書き
-    * (オプション) [Visual Studio](https://visualstudio.microsoft.com/) で[Graffiti.sln](./Graffiti.sln) を開いてください
-* [docker/](./docker/) → Docker 関連の試し書き
-* [go/](./go/) → Go 言語の試し書き
-* [html/](./html/) → HTML の試し書き
-* [java/](./java/) → Java の試し書き
-* [javascript/](./javascript/) → JavaScript の試し書き
-* [MSVSIPInstaller/](./MSVSIPInstaller/) → Microsoft Visual Studio Installer Projects の実装サンプル
-    * [Visual Studio](https://visualstudio.microsoft.com/) で[Graffiti.sln](./Graffiti.sln) を開いてください
-* [php/](./php/) → PHP の試し書き
-* [ruby/](./ruby/) → Ruby の試し書き
-* [shell/](./shell/) → Shell の試し書き
-* [swift/](./swift/) → Swift の試し書き
-* [typescript/](./typescript/) → TypeScript の試し書き
-* [xcode/](./xcode/) → Xcode 関連の試し書き
-    * [Xcode](https://developer.apple.com/documentation/xcode) で、各プロジェクトを開いてください
-
-
-## 取り扱いコンテンツの一覧
-
-## 備考
-
-
-
-
-
-
-
-
-
-## 開発環境
-本リポジトリはマルチプロジェクト構成になっており、
-プロジェクトルートを下記IDE で開いて作業することを想定している。
-
-* [Android Studio](https://developer.android.com/studio)
-* [Visual Studio](https://visualstudio.microsoft.com/)
-* **[Visual Studio Code](https://code.visualstudio.com/)**
-* [Xcode](https://developer.apple.com/documentation/xcode)
-
-また下記も併用している。
-
+### 全体のメモ
 * [anyenv](https://github.com/anyenv/anyenv)
 * [EditorConfig](https://editorconfig.org/)
+* `make`
+
+### 各ディレクトリーのメモ
+* <details>
+    <summary>android/</summary>
+
+    1. [Android Studio](https://developer.android.com/studio) をインストールする
+    2. [android/](./android/) を開く
+  </details>
+* <details>
+    <summary>cpp/</summary>
+
+    * macOS, WSL(Ubuntu)
+        1. g++ をインストールする
+        2. https://code.visualstudio.com/docs/languages/cpp に従ってセットアップする
+  </details>
+* <details>
+    <summary>csharp/</summary>
+
+    * macOS, WSL(Ubuntu)
+        1. dotnet をインストールする
+        2. https://code.visualstudio.com/docs/languages/csharp に従ってセットアップする
+    * Windows
+        1. [Visual Studio] をインストールする
+        2. [Graffiti.sln] を開く
+  </details>
+* <details>
+    <summary>docker/</summary>
+
+    1. Docker をインストールする
+    2. https://code.visualstudio.com/docs/containers/overview に従ってセットアップする
+  </details>
+* <details>
+    <summary>go/</summary>
+
+    1. go をインストールする
+        * バージョンは[.go-version](./go-version) を参照してください
+    2. https://code.visualstudio.com/docs/languages/go に従ってセットアップする
+  </details>
+* <details>
+    <summary>html/</summary>
+
+    WEB ブラウザで各ファイルを開いてください。
+  </details>
+* <details>
+    <summary>java/</summary>
+
+    1. java をインストールする
+        * バージョンは[.java-version](./.java-version) を参照してください
+    2. https://code.visualstudio.com/docs/languages/java に従ってセットアップする
+  </details>
+* <details>
+    <summary>javascript/</summary>
+
+    1. Node.js をインストールする
+        * バージョンは[.node-version](./.node-version) を参照してください
+  </details>
+* <details>
+    <summary>MSVSIPInstaller/</summary>
+
+    * Windows
+        1. [Visual Studio] をインストールする
+        2. [Microsoft Visual Studio Installer Projects 2022](https://marketplace.visualstudio.com/items?itemName=VisualStudioClient.MicrosoftVisualStudio2022InstallerProjects) をインストールする
+        3. [Graffiti.sln] を開く
+  </details>
+* <details>
+    <summary>php/</summary>
+
+    1. PHP をインストールする
+        * バージョンは[.php-version](./.php-version) を参照してください
+  </details>
+* <details>
+    <summary>ruby/</summary>
+
+    1. Ruby をインストールする
+        * バージョンは[.ruby-version](./.ruby-version) を参照してください
+    2. https://code.visualstudio.com/docs/languages/ruby に従ってセットアップする
+  </details>
+* <details>
+    <summary>shell/</summary>
+
+    shell を実行できる環境で試してください。
+  </details>
+* <details>
+    <summary>swift/</summary>
+
+    1. Swift をインストールする
+        * バージョンは[.swift-version](./.swift-version) を参照してください
+    2. https://marketplace.visualstudio.com/items?itemName=sswg.swift-lang に従ってセットアップする
+  </details>
+* <details>
+    <summary>typescript/</summary>
+
+    1. Node.js をインストールする
+        * バージョンは[.node-version](./.node-version) を参照してください
+    2. `npm ci` を実行する
+  </details>
+* <details>
+    <summary>xcode/</summary>
+
+    * macOS
+        1. [Xcode](https://developer.apple.com/documentation/xcode) をインストールする
+        2. [xcode/](./xcode/) 配下の各プロジェクトを開く
+  </details>
 
 
 
-## プロジェクト構成
-パス | 起動方法 | 内容
+## コンテンツ一覧
+パス | 起動方法 | 概要
 --- | --- | ---
-[html/](./html/) | (ディレクトリ内を確認してください) | HTML 関連サンプル
+[cpp/mandelbrot/](./cpp/mandelbrot/) | `make cpp-mandelbrot` | C++ でマンデルブロ集合の算出
+[csharp/](./csharp/) | ([Visual Studio] で`Graffiti.sln` を開く) | C# の試し書き
+[docker/gulp/](./docker/gulp/) | `./docker/gulp/docker-compose.yml` を`Compose up` する | Docker を利用したGulp タスクの実行
+[docker/ng-multi.sh](./docker/ng-multi.sh) | `sh ./docker/ng-multi.sh` | Docker を利用して、Ionic + Angular マルチプロジェクト構成の生成
 [go/mandelbrot.go](./go/mandelbrot.go) | `go run ./go/mandelbrot.go` | Go でマンデルブロ集合の算出
+[html/](./html/) | (ディレクトリ内を確認してください) | HTML 関連サンプル
 [java/mandelbrot](./java/mandelbrot/) | `make java-mandelbrot` | Java でマンデルブロ集合の算出
 [javascript/rxjs-server.js](./javascript/rxjs-server.js) | `node ./javascript/rxjs-server.js` | RxJS サンプル用のサーバー起動
 [MSVSIPInstaller/](./MSVSIPInstaller/) | (VS でプロジェクトを右クリックしてビルド → インストールを実行する) | Microsoft Visual Studio Installer Projects の実装サンプル
@@ -74,3 +139,12 @@
 [typescript/rxjs/](./typescript/rxjs/) | package.json から`start` を実行する | RxJS の試し書き
 [typescript/vscode-web-extension/](./typescript/vscode-web-extension/) | VSCode の起動タスク`VSC WE: Run` を実行する | VSCode の自作Web 拡張機能の試し書き
 [xcode/MySavingReminders/](./xcode/MySavingReminders/) | `make xcode-init-my-saving-reminders` 実行後に、Xcode で該当パスを開く | リマインダーを行うiOS アプリの試し書き
+
+
+
+## 備考
+
+
+
+[Graffiti.sln]: ./Graffiti.sln
+[Visual Studio]: https://visualstudio.microsoft.com/
