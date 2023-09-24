@@ -4,11 +4,48 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Open Mandelbrot",
+            "label": "C++: edit in docker",
             "type": "shell",
-            "command": "code",
+            "command": "docker",
             "args": [
-                "MandelbrotSet"
+                "run",
+                "--rm",
+                "-it",
+                "-v",
+                "${workspaceFolder}/cpp:/home/worker",
+                "-w",
+                "/home/worker",
+                "gcc",
+            ],
+        },
+        {
+            "label": "Go: edit in docker",
+            "type": "shell",
+            "command": "docker",
+            "args": [
+                "run",
+                "--rm",
+                "-it",
+                "-v",
+                "${workspaceFolder}/go:/home/worker",
+                "-w",
+                "/home/worker",
+                "golang"
+            ],
+        },
+        {
+            "label": "Java: edit in docker",
+            "type": "shell",
+            "command": "docker",
+            "args": [
+                "run",
+                "--rm",
+                "-it",
+                "-v",
+                "${workspaceFolder}/java:/home/worker",
+                "-w",
+                "/home/worker",
+                "openjdk:17"
             ],
         },
         {
@@ -20,55 +57,17 @@
                 "--rm",
                 "-it",
                 "-v",
-                "${workspaceFolder}/RubyRecipe:/home/worker",
+                "${workspaceFolder}/ruby:/home/worker",
                 "-w",
                 "/home/worker",
                 "ruby:3.2.2-alpine3.18",
-                "/bin/sh"
-            ]
-        },
-        {
-            "label": "RxJS: edit in docker",
-            "type": "shell",
-            "command": "docker",
-            "args": [
-                "run",
-                "--rm",
-                "-it",
-                "-p",
-                "4200:4200",
-                "-p",
-                "8100:8100",
-                "-p",
-                "8887:8887",
-                "-p",
-                "9876:9876",
-                "-p",
-                "35729:35729",
-                "-p",
-                "53703:53703",
-                "-v",
-                "${workspaceFolder}/RxJS:/home/worker",
-                "tshion/ionic-repl:6.17.1"
-            ],
-        },
-        {
-            "label": "SwiftRecipe: Develop in docker",
-            "type": "shell",
-            "command": "docker",
-            "args": [
-                "run",
-                "--rm",
-                "-it",
-                "-v",
-                "${workspaceFolder}/SwiftRecipe:/home/worker",
-                "tshion/swift-repl:2021-12-06-a"
+                "/bin/sh",
             ]
         },
         {
             "label": "VSC WE: Compile Web",
             "type": "npm",
-            "path": "vscode-web-extension",
+            "path": "typescript/vscode-web-extension",
             "script": "compile-web",
             "group": {
                 "kind": "build",
@@ -76,19 +75,19 @@
             },
             "problemMatcher": [
                 "$ts-webpack",
-                "$tslint-webpack"
+                "$tslint-webpack",
             ]
         },
         {
             "label": "VSC WE: Watch Web",
             "type": "npm",
-            "path": "vscode-web-extension",
+            "path": "typescript/vscode-web-extension",
             "script": "watch-web",
             "group": "build",
             "isBackground": true,
             "problemMatcher": [
                 "$ts-webpack-watch",
-                "$tslint-webpack-watch"
+                "$tslint-webpack-watch",
             ]
         }
     ]

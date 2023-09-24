@@ -1,0 +1,33 @@
+# Editor configuration, see https://editorconfig.org
+root = true
+
+# 共通
+[*]
+charset = utf-8
+indent_size = 4
+indent_style = space
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.go]
+indent_style = tab
+
+[*.html]
+insert_final_newline = false
+
+[*.{js,ts}]
+indent_size = 2
+quote_type = single
+
+[*.json]
+insert_final_newline = false
+
+[*.md]
+max_line_length = off
+trim_trailing_whitespace = false
+
+[*.{yml, yaml}]
+indent_size = 2
+
+[Makefile]
+indent_style = tab

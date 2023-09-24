@@ -1,0 +1,8 @@
+{
+    "name": "graffiti",
+    "private": true,
+    "workspaces": [
+        "typescript/rxjs",
+        "typescript/vscode-web-extension"
+    ]
+}
