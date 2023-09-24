@@ -22,6 +22,8 @@
 * <details>
     <summary>cpp/</summary>
 
+    * Docker
+        1. VSCode タスク`C++: edit in docker` を実行する
     * macOS, WSL(Ubuntu)
         1. g++ をインストールする
         2. https://code.visualstudio.com/docs/languages/cpp に従ってセットアップする
@@ -44,10 +46,13 @@
 * <details>
     <summary>go/</summary>
 
-    1. (任意) [goenv](https://github.com/go-nv/goenv) をインストールする
-    2. [Go 言語](https://go.dev/) をインストールする
-        * バージョンは[.go-version](./go-version) を参照してください
-    3. https://code.visualstudio.com/docs/languages/go に従ってセットアップする
+    * 全般
+        1. (任意) [goenv](https://github.com/go-nv/goenv) をインストールする
+        2. [Go 言語](https://go.dev/) をインストールする
+            * バージョンは[.go-version](./go-version) を参照してください
+        3. https://code.visualstudio.com/docs/languages/go に従ってセットアップする
+    * Docker
+        1. VSCode タスク`Go: edit in docker` を実行する
   </details>
 * <details>
     <summary>html/</summary>
@@ -88,10 +93,13 @@
 * <details>
     <summary>ruby/</summary>
 
-    1. (任意) [rbnv](https://github.com/rbenv/rbenv) をインストールする
-    2. [Ruby](https://www.ruby-lang.org/ja/) をインストールする
-        * バージョンは[.ruby-version](./.ruby-version) を参照してください
-    3. https://code.visualstudio.com/docs/languages/ruby に従ってセットアップする
+    * 全般
+        1. (任意) [rbnv](https://github.com/rbenv/rbenv) をインストールする
+        2. [Ruby](https://www.ruby-lang.org/ja/) をインストールする
+            * バージョンは[.ruby-version](./.ruby-version) を参照してください
+        3. https://code.visualstudio.com/docs/languages/ruby に従ってセットアップする
+    * Docker
+        1. VSCode タスク`Ruby: edit in docker` を実行する
   </details>
 * <details>
     <summary>shell/</summary>
@@ -140,10 +148,10 @@
 [ruby/yaml_to_json.rb](./ruby/yaml_to_json.rb) | `ruby ./ruby/yaml_to_json.rb` | Ruby でYaml からJSON 出力する
 [shell/ngMulti-capacitor.sh](./shell/ngMulti-capacitor.sh) | `sh ./shell/ngMulti-capacitor.sh` | Ionic + Angular マルチプロジェクト構成の生成シェル
 [shell/ngSingle-capacitor.sh](./shell/ngSingle-capacitor.sh) | `sh ./shell/ngSingle-capacitor.sh` | Ionic プロジェクトの生成シェル
-[swift/FileIOs/](./swift/FileIOs/) | `swift build` 後に、`.build/debug/FileIOs` を実行する | Swift でファイル入出力の試し書き
+[swift/FileIOs/](./swift/FileIOs/) | VSCode タスク`Debug FileIOs` を実行する | Swift でファイル入出力の試し書き
 [swift/HelloWorld/](./swift/HelloWorld/) | `swift test` | Swift でユニットテストの試し書き
-[swift/Mandelbrot/](./swift/Mandelbrot/) | `swift build` 後に、`.build/debug/Mandelbrot` を実行する | Swift でマンデルブロ集合の算出
-[swift/UrlSession/](./swift/UrlSession/) | `swift build` 後に、`.build/debug/UrlSession` を実行する | Swift で通信処理の試し書き
+[swift/Mandelbrot/](./swift/Mandelbrot/) | VSCode タスク`Debug Mandelbrot` を実行する | Swift でマンデルブロ集合の算出
+[swift/UrlSession/](./swift/UrlSession/) | VSCode タスク`Debug UrlSession` を実行する | Swift で通信処理の試し書き
 [typescript/rxjs/](./typescript/rxjs/) | package.json から`start` を実行する | RxJS の試し書き
 [typescript/vscode-web-extension/](./typescript/vscode-web-extension/) | VSCode の起動タスク`VSC WE: Run` を実行する | VSCode の自作Web 拡張機能の試し書き
 [xcode/MySavingReminders/](./xcode/MySavingReminders/) | `make xcode-init-my-saving-reminders` 実行後に、Xcode で該当パスを開く | リマインダーを行うiOS アプリの試し書き
@@ -151,6 +159,13 @@
 
 
 ## 備考
+### お題メモ
+* [Hello World](./docs/hello_world.md)
+* [マンデルブロ集合の算出](./docs/mandelbrot.md)
+
+### 注意事項
+* Docker コンテナ内で、ファイル生成した際にパーミッションの取り扱いが変わる可能性があります
+    * ディレクトリー削除できない場合は、コマンドで対応してください
 
 
 

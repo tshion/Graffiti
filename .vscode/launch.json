@@ -1,6 +1,78 @@
 {
     "configurations": [
         {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "name": "Debug FileIOs",
+            "program": "${workspaceFolder:Graffiti}/.build/debug/FileIOs",
+            "args": [],
+            "cwd": "${workspaceFolder:Graffiti}",
+            "preLaunchTask": "swift: Build Debug FileIOs"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "name": "Release FileIOs",
+            "program": "${workspaceFolder:Graffiti}/.build/release/FileIOs",
+            "args": [],
+            "cwd": "${workspaceFolder:Graffiti}",
+            "preLaunchTask": "swift: Build Release FileIOs"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "name": "Debug Mandelbrot",
+            "program": "${workspaceFolder:Graffiti}/.build/debug/Mandelbrot",
+            "args": [],
+            "cwd": "${workspaceFolder:Graffiti}",
+            "preLaunchTask": "swift: Build Debug Mandelbrot"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "name": "Release Mandelbrot",
+            "program": "${workspaceFolder:Graffiti}/.build/release/Mandelbrot",
+            "args": [],
+            "cwd": "${workspaceFolder:Graffiti}",
+            "preLaunchTask": "swift: Build Release Mandelbrot"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "name": "Debug UrlSession",
+            "program": "${workspaceFolder:Graffiti}/.build/debug/UrlSession",
+            "args": [],
+            "cwd": "${workspaceFolder:Graffiti}",
+            "preLaunchTask": "swift: Build Debug UrlSession"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "sourceLanguages": [
+                "swift"
+            ],
+            "name": "Release UrlSession",
+            "program": "${workspaceFolder:Graffiti}/.build/release/UrlSession",
+            "args": [],
+            "cwd": "${workspaceFolder:Graffiti}",
+            "preLaunchTask": "swift: Build Release UrlSession"
+        },
+        {
             "name": "VSC WE: Run",
             "type": "pwa-extensionHost",
             "debugWebWorkerHost": true,
@@ -13,6 +85,6 @@
                 "${workspaceFolder}/typescript/vscode-web-extension/dist/web/**/*.js"
             ],
             "preLaunchTask": "VSC WE: Watch Web"
-        }
+        },
     ]
 }

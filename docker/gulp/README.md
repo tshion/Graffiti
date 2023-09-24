@@ -6,7 +6,7 @@ Gulp タスクの実行環境をDocker コンテナ内で完結させるサン�
 ## 用途と使い方
 下記にまとめています。
 
-* [ファイルコピー](http://tshion.webcrow.jp/itlog/index.html?id=20170704235946)
+* [ファイルコピー](https://mklog.netlify.app/notes/20170704235946)
 
 
 
