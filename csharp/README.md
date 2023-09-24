@@ -1,15 +1,4 @@
 # csharp/ → C# の試し書き
-## 開発環境
-* OS
-    * macOS
-    * Windows
-    * WSL(Ubuntu)
-* 関連ツール
-    * dotnet
-
-
-
-## 取り扱い内容
 プロジェクト | 概要
 --- | ---
 [HelloBlazorWasmWorld/](./HelloBlazorWasmWorld/) | Blazor Wasm の試し書き
