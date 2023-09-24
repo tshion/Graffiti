@@ -1,5 +1,40 @@
 # Graffiti
-色々な言語の落書きリポジトリ。
+色々なプログラミング言語の試し書きリポジトリ。
+
+基本的には[Visual Studio Code](https://code.visualstudio.com/) でプロジェクトルートを開き、
+実行環境を整備することで、試すことが出来ます。
+詳細は各ディレクトリーを確認してください。
+
+* [android/](./android/) → Android 関連の試し書き
+    * [Android Studio](https://developer.android.com/studio) で[android/](./android/) を開いてください
+* [cpp/](./cpp/) → C++ の試し書き
+* [csharp/](./csharp/) → C# の試し書き
+    * (オプション) [Visual Studio](https://visualstudio.microsoft.com/) で[Graffiti.sln](./Graffiti.sln) を開いてください
+* [docker/](./docker/) → Docker 関連の試し書き
+* [go/](./go/) → Go 言語の試し書き
+* [html/](./html/) → HTML の試し書き
+* [java/](./java/) → Java の試し書き
+* [javascript/](./javascript/) → JavaScript の試し書き
+* [MSVSIPInstaller/](./MSVSIPInstaller/) → Microsoft Visual Studio Installer Projects の実装サンプル
+    * [Visual Studio](https://visualstudio.microsoft.com/) で[Graffiti.sln](./Graffiti.sln) を開いてください
+* [php/](./php/) → PHP の試し書き
+* [ruby/](./ruby/) → Ruby の試し書き
+* [shell/](./shell/) → Shell の試し書き
+* [swift/](./swift/) → Swift の試し書き
+* [typescript/](./typescript/) → TypeScript の試し書き
+* [xcode/](./xcode/) → Xcode 関連の試し書き
+    * [Xcode](https://developer.apple.com/documentation/xcode) で、各プロジェクトを開いてください
+
+
+## 取り扱いコンテンツの一覧
+
+## 備考
+
+
+
+
+
+
 
 
 
@@ -22,11 +57,6 @@
 ## プロジェクト構成
 パス | 起動方法 | 内容
 --- | --- | ---
-[android/](./android/) | (Android Studio でandroid/ を開いてください ) | Android 関連の試し書き
-[cpp/mandelbrot/](./cpp/mandelbrot/) | `make cpp-mandelbrot` | C++ でマンデルブロ集合の算出
-[csharp/](./csharp/) | (Visual Studio でGraffiti.sln を開いてください) | C# 関連の試し書き
-[docker/gulp/](./docker/gulp/) | `./docker/gulp/docker-compose.yml` を`Compose up` する | Docker を利用したGulp タスクの実行
-[docker/ng-multi.sh](./docker/ng-multi.sh) | `sh ./docker/ng-multi.sh` | Docker を利用して、Ionic + Angular マルチプロジェクト構成の生成
 [html/](./html/) | (ディレクトリ内を確認してください) | HTML 関連サンプル
 [go/mandelbrot.go](./go/mandelbrot.go) | `go run ./go/mandelbrot.go` | Go でマンデルブロ集合の算出
 [java/mandelbrot](./java/mandelbrot/) | `make java-mandelbrot` | Java でマンデルブロ集合の算出

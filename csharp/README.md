@@ -1,6 +1,15 @@
-# csharp
-C# 関連の試し書き。
+# csharp/ → C# の試し書き
+## 開発環境
+* OS
+    * macOS
+    * Windows
+    * WSL(Ubuntu)
+* 関連ツール
+    * dotnet
 
+
+
+## 取り扱い内容
 プロジェクト | 概要
 --- | ---
 [HelloBlazorWasmWorld/](./HelloBlazorWasmWorld/) | Blazor Wasm の試し書き
@@ -14,11 +23,10 @@ C# 関連の試し書き。
 
 
 
-## メモ
+## 備考
+### メモ
 * インストーラカスタムアクションは複数クラスで定義できるけど、処理の解決順は不明
 
-
-## Links
 ### 参考文献
 * [Microsoft Visual Studio Installer Projects]
 
