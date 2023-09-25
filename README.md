@@ -20,6 +20,12 @@
         * 手順1 を実行した場合は、そのツールからインストールする
   </details>
 * <details>
+    <summary>c/</summary>
+
+    * Windows
+        1. [Visual Studio] をインストールする
+  </details>
+* <details>
     <summary>cpp/</summary>
 
     * Docker
@@ -134,6 +140,7 @@
 パス | 起動方法 | 概要
 --- | --- | ---
 [android/](./android/) | ([Android Studio] で`android/` を開く) | Android 関連の試し書き
+[c/](./c/) | ([Visual Studio] で`Graffiti.sln` を開く) | C 言語の試し書き
 [cpp/mandelbrot/](./cpp/mandelbrot/) | `make cpp-mandelbrot` | C++ でマンデルブロ集合の算出
 [csharp/](./csharp/) | ([Visual Studio] で`Graffiti.sln` を開く) | C# の試し書き
 [docker/gulp/](./docker/gulp/) | `./docker/gulp/docker-compose.yml` を`Compose up` する | Docker を利用したGulp タスクの実行
