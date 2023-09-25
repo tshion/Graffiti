@@ -1,0 +1,20 @@
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+        // トランスパイル設定
+        "module": "commonjs",
+        "rootDir": "src",
+        "skipLibCheck": true,
+        "target": "ES2020",
+        "lib": [
+            "ES2020"
+        ],
+        // ソースマップ関連
+        "sourceMap": true,
+        // Lint 関連
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true,
+        "noUnusedParameters": true,
+        "strict": true,
+    }
+}

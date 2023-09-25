@@ -1,0 +1,36 @@
+{
+    "name": "graffiti",
+    "displayName": "graffiti-vscode-extension",
+    "description": "VSCode 拡張機能の実装サンプル",
+    "license": "UNLICENSED",
+    "publisher": "tshion",
+    "repository": "https://github.com/tshion/Graffiti",
+    "version": "2023.9.25",
+    "categories": [
+        "Other"
+    ],
+    "engines": {
+        "vscode": "^1.82.0"
+    },
+    "main": "./dist/extension.js",
+    "activationEvents": [],
+    "contributes": {},
+    "scripts": {
+        "compile": "webpack",
+        "lint": "eslint src --ext ts",
+        "package": "webpack --mode production --devtool hidden-source-map",
+        "vscode:prepublish": "npm run package",
+        "watch": "webpack --watch"
+    },
+    "devDependencies": {
+        "@types/node": "20.x",
+        "@types/vscode": "^1.82.0",
+        "@typescript-eslint/eslint-plugin": "^6.4.1",
+        "@typescript-eslint/parser": "^6.4.1",
+        "eslint": "^8.47.0",
+        "typescript": "^5.1.6",
+        "ts-loader": "^9.4.4",
+        "webpack": "^5.88.2",
+        "webpack-cli": "^5.1.4"
+    }
+}

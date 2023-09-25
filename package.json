@@ -3,6 +3,7 @@
     "private": true,
     "workspaces": [
         "typescript/rxjs",
+        "typescript/vscode-extension",
         "typescript/vscode-web-extension"
     ]
 }

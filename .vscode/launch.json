@@ -73,6 +73,19 @@
             "preLaunchTask": "swift: Build Release UrlSession"
         },
         {
+            "name": "Run: vscode-extension",
+            "type": "extensionHost",
+            "request": "launch",
+            "args": [
+                "--disable-extensions",
+                "--extensionDevelopmentPath=${workspaceFolder}/typescript/vscode-extension",
+            ],
+            "outFiles": [
+                "${workspaceFolder}/typescript/vscode-extension/dist/**/*.js"
+            ],
+            "preLaunchTask": "Watch: vscode-extension"
+        },
+        {
             "name": "VSC WE: Run",
             "type": "pwa-extensionHost",
             "debugWebWorkerHost": true,
