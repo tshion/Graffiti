@@ -1,6 +1,10 @@
+# C++ でHello World
+cpp/run-hello-world:
+	cd ./cpp ; $(MAKE) $(@F)
+
 # C++ でマンデルブロ集合の算出
-cpp-run-mandelbrot:
-	cd ./cpp ; $(MAKE) run-mandelbrot
+cpp/run-mandelbrot:
+	cd ./cpp ; $(MAKE) $(@F)
 
 # Java でマンデルブロ集合の算出
 java-mandelbrot:
