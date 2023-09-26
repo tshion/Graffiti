@@ -6,7 +6,7 @@
 
 
 ## コンテンツ一覧
-プロジェクト | VS | `make` | 概要
---- | :---: | --- | ---
-[HelloWorld/](./HelloWorld/) | 〇 | (未対応) | Hello World
-[mandelbrot/](./mandelbrot/) | × | `run-mandelbrot` | マンデルブロ集合の算出
+プロジェクト | `make` | 概要
+--- | --- | ---
+[HelloWorld/](./HelloWorld/) | (未対応) | Hello World
+[Mandelbrot/](./Mandelbrot/) | `run-mandelbrot` | マンデルブロ集合の算出
