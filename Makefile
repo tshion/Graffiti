@@ -1,5 +1,5 @@
 # C++ でマンデルブロ集合の算出
-cpp-mandelbrot:
+cpp-run-mandelbrot:
 	cd ./cpp ; $(MAKE) run-mandelbrot
 
 # Java でマンデルブロ集合の算出
