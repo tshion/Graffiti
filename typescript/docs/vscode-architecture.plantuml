@@ -1,0 +1,12 @@
+@startuml
+
+[vscode-extension]
+[vscode-extension-bridge]
+[vscode-extension-ui]
+
+
+[vscode-extension] .right.> [vscode-extension-ui]: VSCode WebView に表示
+[vscode-extension] -up-> [vscode-extension-bridge]: 依存
+[vscode-extension-ui] --> [vscode-extension-bridge]: 依存
+
+@enduml
