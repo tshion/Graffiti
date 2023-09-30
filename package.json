@@ -4,6 +4,8 @@
     "workspaces": [
         "typescript/rxjs",
         "typescript/vscode-extension",
+        "typescript/vscode-extension-bridge",
+        "typescript/vscode-extension-ui",
         "typescript/vscode-web-extension"
     ]
 }

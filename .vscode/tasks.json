@@ -65,6 +65,27 @@
             ]
         },
         {
+            "label": "Serve: vscode-extension-ui",
+            "path": "./typescript/vscode-extension-ui",
+            "type": "npm",
+            "script": "start",
+            "problemMatcher": {
+                "owner": "typescript",
+                "pattern": "$tsc",
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": {
+                        "regexp": "(.*?)"
+                    },
+                    "endsPattern": {
+                        "regexp": "bundle generation complete"
+                    }
+                }
+            },
+            "isBackground": true,
+            "group": "build",
+        },
+        {
             "label": "VSC WE: Compile Web",
             "type": "npm",
             "path": "typescript/vscode-web-extension",

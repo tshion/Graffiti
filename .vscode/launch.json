@@ -86,6 +86,14 @@
             "preLaunchTask": "Watch: vscode-extension"
         },
         {
+            "name": "Run: vscode-extension-ui",
+            "type": "chrome",
+            "request": "launch",
+            "preLaunchTask": "Serve: vscode-extension-ui",
+            "url": "http://localhost:4200/",
+            "webRoot": "${workspaceFolder}/typescript/vscode-extension-ui",
+        },
+        {
             "name": "VSC WE: Run",
             "type": "pwa-extensionHost",
             "debugWebWorkerHost": true,

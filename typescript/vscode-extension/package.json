@@ -1,5 +1,5 @@
 {
-    "name": "graffiti",
+    "name": "graffiti-vscode-extension",
     "displayName": "graffiti-vscode-extension",
     "description": "VSCode 拡張機能の実装サンプル",
     "license": "UNLICENSED",

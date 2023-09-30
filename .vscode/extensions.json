@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "amodio.tsl-problem-matcher",
+        "angular.ng-template",
         "dbaeumer.vscode-eslint",
         "editorconfig.editorconfig",
         "golang.go",
