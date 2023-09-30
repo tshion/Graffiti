@@ -1,6 +1,7 @@
 # Saving Reminders
-## Completed Project
-Explore the completed project for the [Saving Reminders](https://developer.apple.com/tutorials/app-dev-training/saving-reminders) tutorial.
+下記のApple 公式チュートリアルの試し書き。
+
+https://developer.apple.com/tutorials/app-dev-training/saving-reminders
 
 
 ## 開発環境の整備
