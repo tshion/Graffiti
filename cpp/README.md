@@ -6,7 +6,7 @@
 
 
 ## コンテンツ一覧
-プロジェクト | `make` | 概要
+パス | `make` | 概要
 --- | --- | ---
 [HelloWorld/](./HelloWorld/) | `run-hello-world` | Hello World
 [Mandelbrot/](./Mandelbrot/) | `run-mandelbrot` | マンデルブロ集合の算出

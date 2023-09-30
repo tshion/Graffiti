@@ -22,6 +22,9 @@
 * <details>
     <summary>c/</summary>
 
+    * macOS, WSL(Ubuntu)
+        1. gcc をインストールする
+        2. https://code.visualstudio.com/docs/languages/cpp に従ってセットアップする
     * Windows
         1. [Visual Studio] をインストールする
   </details>
@@ -142,7 +145,7 @@
 パス | 起動方法 | 概要
 --- | --- | ---
 [android/](./android/) | ([Android Studio] で`android/` を開く) | Android 関連の試し書き
-[c/](./c/) | ([Visual Studio] で`Graffiti.sln` を開く) | C 言語の試し書き
+[c/](./c/) | (ディレクトリ内を確認してください) | C 言語の試し書き
 [cpp/](./cpp/) | (ディレクトリ内を確認してください) | C++ の試し書き
 [csharp/](./csharp/) | ([Visual Studio] で`Graffiti.sln` を開く) | C# の試し書き
 [docker/gulp/](./docker/gulp/) | `./docker/gulp/docker-compose.yml` を`Compose up` する | Docker を利用したGulp タスクの実行
