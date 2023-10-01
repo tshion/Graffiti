@@ -163,11 +163,11 @@
 [swift/FileIOs/](./swift/FileIOs/) | VSCode タスク`Debug FileIOs` を実行する | Swift でファイル入出力の試し書き
 [swift/HelloWorld/](./swift/HelloWorld/) | `swift test` | Swift でユニットテストの試し書き
 [swift/Mandelbrot/](./swift/Mandelbrot/) | VSCode タスク`Debug Mandelbrot` を実行する | Swift でマンデルブロ集合の算出
+[swift/MySavingReminders/](./swift/MySavingReminders/) | `make swift/init-my-saving-reminders` 実行後に、Xcode で該当パスを開く | リマインダーを行うiOS アプリの試し書き
 [swift/UrlSession/](./swift/UrlSession/) | VSCode タスク`Debug UrlSession` を実行する | Swift で通信処理の試し書き
 [typescript/rxjs/](./typescript/rxjs/) | package.json から`start` を実行する | RxJS の試し書き
 [typescript/vscode-extension/](./typescript/vscode-extension/) | VSCode 起動タスク`Run: vscode-extension` を実行する | VSCode 拡張機能の実装サンプル
 [typescript/vscode-web-extension/](./typescript/vscode-web-extension/) | VSCode の起動タスク`VSC WE: Run` を実行する | VSCode の自作Web 拡張機能の試し書き
-[xcode/MySavingReminders/](./xcode/MySavingReminders/) | `make xcode-init-my-saving-reminders` 実行後に、Xcode で該当パスを開く | リマインダーを行うiOS アプリの試し書き
 
 
 

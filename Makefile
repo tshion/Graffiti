@@ -18,10 +18,10 @@ cpp/run-mandelbrot:
 java/run-mandelbrot:
 	cd ./$(@D) ; $(MAKE) $(@F)
 
-# Xcode > MySavingReminders の初期セットアップ
-xcode-init-my-saving-reminders:
-	cd ./xcode/MySavingReminders ; $(MAKE) init
+# Swift > MySavingReminders の初期セットアップ
+swift/init-my-saving-reminders:
+	cd ./$(@D)/MySavingReminders ; $(MAKE) init
 
-# Xcode > MySavingReminders のプロジェクトセットアップ
-xcode-my-saving-reminders:
-	cd ./xcode/MySavingReminders ; $(MAKE)
+# Swift > MySavingReminders のプロジェクトセットアップ
+swift/my-saving-reminders:
+	cd ./$(@D)/MySavingReminders ; $(MAKE)
