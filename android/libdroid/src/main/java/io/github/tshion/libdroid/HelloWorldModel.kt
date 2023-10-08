@@ -5,9 +5,9 @@ package io.github.tshion.libdroid
  *
  * @author tshion
  */
-class HelloWorldModel {
+public class HelloWorldModel {
 
-    fun sayHello() {
-        print("Hello World")
+    public fun sayHello(name: String): String {
+        return "Hello $name!"
     }
 }

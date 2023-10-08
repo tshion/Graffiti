@@ -49,6 +49,9 @@ android {
 
 dependencies {
 
+    // Local Projects
+    implementation(project(":libdroid"))
+
     // AndroidX
     implementation(libs.activity.compose)
     implementation(platform(libs.compose.bom))

@@ -31,6 +31,9 @@ android {
         targetCompatibility = JavaVersion.VERSION_1_8
     }
     kotlinOptions {
+        freeCompilerArgs = listOf(
+            "-Xexplicit-api=strict"
+        )
         jvmTarget = "1.8"
     }
     publishing {
