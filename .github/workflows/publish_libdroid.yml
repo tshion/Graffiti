@@ -18,6 +18,9 @@ jobs:
       packages: write
     steps:
     - uses: actions/checkout@v4
+    - name: Allow running ./gradlew
+      run: chmod +x ./gradlew
+      working-directory: ./android
     - name: Publish to GitHub Packages
       env:
         USERNAME: ${{ github.actor }}
