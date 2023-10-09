@@ -63,4 +63,7 @@ dependencies {
     debugImplementation(libs.ui.test.manifest)
     debugImplementation(libs.ui.tooling)
     implementation(libs.ui.tooling.preview)
+
+    // LeakCanary
+    debugImplementation(libs.leakCanary)
 }
