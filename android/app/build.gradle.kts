@@ -50,6 +50,7 @@ android {
 dependencies {
 
     // Local Projects
+    implementation(project(":connpass-connector"))
     implementation(project(":libdroid"))
 
     // AndroidX

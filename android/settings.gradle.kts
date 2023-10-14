@@ -15,4 +15,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Graffiti"
 include(":app")
+include(":connpass-connector")
 include(":libdroid")
