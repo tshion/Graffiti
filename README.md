@@ -152,7 +152,7 @@
 [docker/ng-multi.sh](./docker/ng-multi.sh) | `sh ./docker/ng-multi.sh` | Docker を利用して、Ionic + Angular マルチプロジェクト構成の生成
 [go/mandelbrot.go](./go/mandelbrot.go) | `go run ./go/mandelbrot.go` | Go でマンデルブロ集合の算出
 [html/](./html/) | (ディレクトリ内を確認してください) | HTML 関連サンプル
-[java/mandelbrot](./java/mandelbrot/) | `make java/run-mandelbrot` | Java でマンデルブロ集合の算出
+[java/](./java/) | (ディレクトリ内を確認してください) | Java の試し書き
 [javascript/rxjs-server.js](./javascript/rxjs-server.js) | `node ./javascript/rxjs-server.js` | RxJS サンプル用のサーバー起動
 [MSVSIPInstaller/](./MSVSIPInstaller/) | (VS でプロジェクトを右クリックしてビルド → インストールを実行する) | Microsoft Visual Studio Installer Projects の実装サンプル
 [php/hello.php](./php/hello.php) | `php ./php/hello.php` | PHP のHello World
