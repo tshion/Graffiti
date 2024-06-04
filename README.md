@@ -13,13 +13,6 @@
 
 ### 各ディレクトリーの整備メモ
 * <details>
-    <summary>android/</summary>
-
-    1. (任意) [JetBrains Toolbox App](https://www.jetbrains.com/ja-jp/toolbox-app/) をインストールする
-    2. [Android Studio] をインストールする
-        * 手順1 を実行した場合は、そのツールからインストールする
-  </details>
-* <details>
     <summary>c/</summary>
 
     * macOS, WSL(Ubuntu)
@@ -144,7 +137,6 @@
 ## コンテンツ一覧
 パス | 起動方法 | 概要
 --- | --- | ---
-[android/](./android/) | ([Android Studio] で`android/` を開く) | Android 関連の試し書き
 [c/](./c/) | (ディレクトリ内を確認してください) | C 言語の試し書き
 [cpp/](./cpp/) | (ディレクトリ内を確認してください) | C++ の試し書き
 [csharp/](./csharp/) | ([Visual Studio] で`Graffiti.sln` を開く) | C# の試し書き
@@ -181,7 +173,6 @@
 
 
 
-[Android Studio]: https://developer.android.com/studio
 [Node.js]: https://nodejs.org/ja
 [nodenv]: https://github.com/nodenv/nodenv
 [Visual Studio]: https://visualstudio.microsoft.com/
