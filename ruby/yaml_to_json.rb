@@ -3,11 +3,14 @@
 # YAML を読み込んで、文字列置換して、JSON に出力するサンプル
 
 require 'json'
+require 'pathname'
 require 'yaml'
+
+PATH_ROOT = Pathname.new(__dir__).join("..")
 
 # ファイル読み込み
 text = ""
-File.open("#{Dir.pwd}/ruby/assets/jitpack.yml", "r") { |file|
+File.open(Pathname.new(PATH_ROOT).join("ruby/assets/jitpack.yml"), "r") { |file|
     text = file.read
 }
 
@@ -22,7 +25,7 @@ targets = yaml["jdk"]
 replaced = targets.map { _1.gsub(/\d/, "?") }
 
 # JSON に出力する
-distPath = "#{Dir.pwd}/ruby/dist"
+distPath = Pathname.new(PATH_ROOT).join("ruby/dist")
 result = { jdk: replaced }
 if !Dir.exist?(distPath) then
     Dir.mkdir(distPath)
