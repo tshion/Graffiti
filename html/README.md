@@ -5,6 +5,7 @@ HTML5 関連の試し書き
 --- | ---
 [drag_and_drop](drag_and_drop.html) | Drag and Drop のサンプル
 [reader](reader.html) | FileReader のサンプル
+[save_file](./save_file.html) | (クライアントで完結する) ファイル保存のサンプル
 
 
 ## 参考文献

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save file</title>
+</head>
+
+<body>
+    <label for="input_name">名前:</label>
+    <input type="text" name="input_name" id="input_name" />
+    <br />
+    <a id="button_download" download="sample.json">入力内容からファイル生成</a>
+
+    <script>
+        window.onload = function () {
+            const button = document.getElementById('button_download');
+            button.onclick = () => {
+                const input = document.getElementById('input_name');
+                const data = {
+                    value: `Hello ${input.value} from file.`
+                };
+
+                const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
+                button.href = window.URL.createObjectURL(blob);
+            };
+        };
+    </script>
+</body>
+
+</html>
