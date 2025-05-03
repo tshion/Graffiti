@@ -12,16 +12,19 @@ TypeScript Compiler API の試し書き。
     * デフォルトのデータ -> JSON
     * 編集UI -> HTML
 
-## 取り扱う書式
+## 取り扱うデータ
 以下のようなデータを取り扱う。
 
-* 色
-* 数値
+* `boolean`
+* `number`
     * 整数
+        * リテラル
     * 小数
-* 定数
-* 文字列
-* 論理値
+        * 緯度
+        * 経度
+* `string`
+    * 色
+    * リテラル
 
 ``` typescript
 /**
@@ -47,10 +50,10 @@ class DataSample {
     /** 経度 */
     lon: Longitude = 139.741357;
 
-    /** 定数(整数) */
+    /** リテラル(整数) */
     d1: 0 | 1 | 2 = 1;
 
-    /** 定数(文字列) */
+    /** リテラル(文字列) */
     d2: "North" | "East" | "South" | "West" = "East";
 
     /** 文字列 */
@@ -60,3 +63,11 @@ class DataSample {
     f1: boolean = false;
 }
 ```
+
+
+## 関連ツール
+* https://ts-ast-viewer.com/
+    * AST を確認するのに便利
+
+## 参考文献
+* https://github.com/microsoft/TypeScript/wiki/Using-the-Compiler-API

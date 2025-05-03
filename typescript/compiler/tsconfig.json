@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "moduleResolution": "Bundler",
+        "target": "ES2015",
+    },
+    "exclude": [
+        "node_modules",
+        "**/node_modules/*"
+    ]
+}
