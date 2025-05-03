@@ -1,6 +1,7 @@
 # typescript/ → TypeScript の試し書き
 パス | 概要
 --- | ---
+[compiler](./compiler/) | Typescript Compiler API の試し書き
 [rxjs/](./rxjs/) | RxJS の試し書き
 [vscode-extension/] | VSCode 拡張機能の実装サンプル
 [vscode-extension-bridge/](./vscode-extension-bridge/) | [vscode-extension/] で表示したWebView 内のコンテンツと拡張機能間を繋ぐための実装サンプル

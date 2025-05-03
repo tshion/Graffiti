@@ -1,0 +1,12 @@
+{
+    "name": "@graffiti/ts-compiler",
+    "private": true,
+    "scripts": {
+        "convert:json": "tsx ./scripts/convert-json.ts"
+    },
+    "devDependencies": {
+        "@types/node": "^20.17.32",
+        "tsx": "^4.19.4",
+        "typescript": "^5.8.3"
+    }
+}

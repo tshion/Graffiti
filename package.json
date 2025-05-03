@@ -2,6 +2,7 @@
     "name": "graffiti",
     "private": true,
     "workspaces": [
+        "typescript/compiler",
         "typescript/rxjs",
         "typescript/vscode-extension",
         "typescript/vscode-extension-bridge",
