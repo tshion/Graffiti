@@ -11,9 +11,9 @@
     "dependencies": {
         "@angular-eslint/schematics": "21.4.0",
         "@angular/animations": "^16.2.0",
-        "@angular/common": "^21.0.1",
+        "@angular/common": "^20.3.14",
         "@angular/compiler": "^21.2.13",
-        "@angular/core": "^21.2.5",
+        "@angular/core": "^21.2.6",
         "@angular/forms": "^16.2.0",
         "@angular/platform-browser": "^16.2.0",
         "@angular/platform-browser-dynamic": "^16.2.0",
